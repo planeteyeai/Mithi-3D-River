@@ -1,0 +1,2086 @@
+{
+  "generatedAt": "2026-11-12T09:46:00.243Z",
+  "river": "Mithi",
+  "policy": {
+    "geometry": "Original OSM LineString only (optional water-clip of same way)",
+    "defaultRender": "EXISTING only",
+    "inventedBankToBank": false,
+    "osmPerpCross": false
+  },
+  "summary": {
+    "corridorBridgesScanned": 262,
+    "audited": 131,
+    "packTotal": 20,
+    "existing": 20,
+    "underConstruction": 0,
+    "proposed": 0,
+    "unverifiedHidden": 111
+  },
+  "features": [
+    {
+      "osmId": "22847770",
+      "name": "Sion Flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 899,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "22859324",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 920,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "39744013",
+      "name": "Bridge 39744013",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 51,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "39744021",
+      "name": "Bridge 39744021",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 65,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "46166155",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 919,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "46417980",
+      "name": "Bridge 46417980",
+      "highway": "motorway_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 248,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "46417999",
+      "name": "Western Express Highway",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 172,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "46418000",
+      "name": "Western Express Highway",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 133,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "48803903",
+      "name": "Bandra Worli Sea Link Flyover",
+      "highway": "motorway_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 724,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "48803904",
+      "name": "Bandra Worli Sea Link Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 572,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "48803915",
+      "name": "Bandra Worli Sea Link Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 372,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "48806652",
+      "name": "Central Railway (Harbour Line)",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 656,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "49187036",
+      "name": "Santa Cruz – Chembur Link Road",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 93,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "125288011",
+      "name": "Bridge 125288011",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 60,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "151203930",
+      "name": "Bridge 151203930",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 105,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "151889242",
+      "name": "A H Wadia Marg",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 47,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "196489667",
+      "name": "Central Railway (Harbour Line)",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 655,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "275783913",
+      "name": "Shahid Major Kaustubh Rane flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 175,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "275783915",
+      "name": "Shahid Major Kaustubh Rane flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 349,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "275783919",
+      "name": "Shahid Major Kaustubh Rane flyover",
+      "highway": "trunk_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 184,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "275784832",
+      "name": "Shahid Major Kaustubh Rane flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 348,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "280340477",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 35,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "286066412",
+      "name": "Bridge 286066412",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 60,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "286066414",
+      "name": "Bridge 286066414",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 28,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "286066416",
+      "name": "Bridge 286066416",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 26,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "286258575",
+      "name": "Santa Cruz – Chembur Link Road",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 114,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "369464198",
+      "name": "Mahim Sion Link Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 19,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376503087",
+      "name": "Chunabhatti Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 33,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376503091",
+      "name": "Lal Bahadur Shastri Marg",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 59,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376503092",
+      "name": "Lal Bahadur Shastri Marg",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 58,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376503106",
+      "name": "Sewri-Chembur Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 45,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376503110",
+      "name": "Bridge 376503110",
+      "highway": "residential",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 12,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376930286",
+      "name": "Bridge 376930286",
+      "highway": "residential",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 34,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376930290",
+      "name": "Bridge 376930290",
+      "highway": "residential",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 27,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "376930292",
+      "name": "Bridge 376930292",
+      "highway": "service",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 20,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "427282406",
+      "name": "Anant Kanekar Marg",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 518,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "431515779",
+      "name": "Sion Bandra Link Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 70,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "431515782",
+      "name": "Sion Bandra Link Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 72,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "436339860",
+      "name": "Bridge 436339860",
+      "highway": "residential",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 41,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "436339870",
+      "name": "Bridge 436339870",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 17,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "526854517",
+      "name": "Bridge 526854517",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 48,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "617731233",
+      "name": "Sion Panvel Highway",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 48,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "617731235",
+      "name": "Sion Panvel Highway",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 48,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "618038079",
+      "name": "Sion Panvel Highway",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 82,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "626142592",
+      "name": "Pipeline Road",
+      "highway": "residential",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 39,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "666841871",
+      "name": "Kalanagar Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 475,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "666841874",
+      "name": "Kalanagar Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 128,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "781375324",
+      "name": "Bridge 781375324",
+      "highway": "service",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 23,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "790255092",
+      "name": "Bridge 790255092",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 410,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "793163030",
+      "name": "Mahim Sion Link Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 28,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "793163032",
+      "name": "Mahim Sion Link Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 17,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "909382839",
+      "name": "BKC - WEH Connector",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 951,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "909382848",
+      "name": "Sion Flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 239,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "909382855",
+      "name": "BKC Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 617,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "909382856",
+      "name": "BKC Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 799,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "909382859",
+      "name": "Western Express Highway",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 595,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "909382860",
+      "name": "Western Express Highway",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 583,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1118316162",
+      "name": "Sion Flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 899,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1122421029",
+      "name": "Flyover",
+      "highway": "trunk_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 242,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1122421033",
+      "name": "SCLR Flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 448,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1122440726",
+      "name": "BKC - SCLR Connector",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 180,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1123308774",
+      "name": "Bridge 1123308774",
+      "highway": "motorway_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 36,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1152866663",
+      "name": "Bridge 1152866663",
+      "highway": "unclassified",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 15,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1158399723",
+      "name": "Bridge 1158399723",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 995,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1158399724",
+      "name": "Flyover",
+      "highway": "trunk_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 173,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1175887361",
+      "name": "Bridge 1175887361",
+      "highway": "service",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 5,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1186783938",
+      "name": "Mahim Sion Link Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 28,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1186783939",
+      "name": "Bridge 1186783939",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 108,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1186783940",
+      "name": "Mahim Sion Link Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 85,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1186783941",
+      "name": "Mahim Sion Link Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 85,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1186783942",
+      "name": "Bridge 1186783942",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 225,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1186873776",
+      "name": "Bridge 1186873776",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 189,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1190577578",
+      "name": "Bridge 1190577578",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 9,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1190577580",
+      "name": "Bridge 1190577580",
+      "highway": "tertiary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 6,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201623094",
+      "name": "Bhagwan Swaminarayan Flyover",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 65,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201623095",
+      "name": "Bhagwan Swaminarayan Flyover",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 35,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201625672",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 421,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201625673",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 15,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201625674",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 306,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201625675",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 15,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1201625676",
+      "name": "Kalina-Vakola Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 157,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1238867121",
+      "name": "Bandra Worli Sea Link Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 201,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1291854635",
+      "name": "Sion Flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 237,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1291885011",
+      "name": "Bhagwan Swaminarayan Flyover",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 76,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1293947940",
+      "name": "Sion Panvel Highway",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 76,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1311474905",
+      "name": "Bridge 1311474905",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 1676,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1327051208",
+      "name": "BKC - WEH Connector",
+      "highway": "secondary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 1091,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1333243989",
+      "name": "Bridge 1333243989",
+      "highway": "trunk_link",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 280,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1393850920",
+      "name": "Line 11",
+      "highway": "railway",
+      "railway": "proposed",
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 251,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1393850921",
+      "name": "Line 11",
+      "highway": "railway",
+      "railway": "proposed",
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 93,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1393850922",
+      "name": "Line 11",
+      "highway": "railway",
+      "railway": "proposed",
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 54,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1469865142",
+      "name": "SCLR - LBS Marg Connector",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 274,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1485349211",
+      "name": "Bridge 1485349211",
+      "highway": "service",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 40,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1534243907",
+      "name": "Bridge 1534243907",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 17,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1534243908",
+      "name": "Sewri-Chembur Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 18,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1534243910",
+      "name": "Bridge 1534243910",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 17,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1534243912",
+      "name": "Sewri-Chembur Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 16,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "1562122424",
+      "name": "Kalanagar Flyover",
+      "highway": "motorway",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "REJECT_NO_WATER",
+      "srcLenM": 347,
+      "waterOverlapM": 0,
+      "note": "Not verified against satellite / infrastructure records"
+    },
+    {
+      "osmId": "46417981",
+      "name": "Mahim Causeway",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 59,
+      "deckLenM": 59,
+      "waterOverlapM": 52.1,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.83823915,
+        "lat": 19.04825555
+      },
+      "note": "Historic causeway over Mithi; BMC arch rebuild underway beside existing deck",
+      "first": [
+        72.8382437,
+        19.0479888
+      ],
+      "last": [
+        72.8382346,
+        19.0485223
+      ]
+    },
+    {
+      "osmId": "48803916",
+      "name": "Mahim Causeway",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 58.5,
+      "deckLenM": 58.5,
+      "waterOverlapM": 50.9,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.83835305,
+        "lat": 19.04825965
+      },
+      "note": "Dual carriageway of Mahim Causeway",
+      "first": [
+        72.8383485,
+        19.048524
+      ],
+      "last": [
+        72.8383576,
+        19.0479953
+      ]
+    },
+    {
+      "osmId": "436692570",
+      "name": "Bridge 436692570",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 65.2,
+      "deckLenM": 65.2,
+      "waterOverlapM": 63.3,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84188995,
+        "lat": 19.050834000000002
+      },
+      "note": "Not verified against satellite / infrastructure records",
+      "first": [
+        72.842004,
+        19.05056
+      ],
+      "last": [
+        72.8417759,
+        19.051108
+      ]
+    },
+    {
+      "osmId": "46417988",
+      "name": "Western Express Highway",
+      "highway": "motorway",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 79.7,
+      "deckLenM": 79.7,
+      "waterOverlapM": 0,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8418932,
+        "lat": 19.05150635
+      },
+      "note": "WEH dual carriageway over Mithi near Mahim",
+      "first": [
+        72.8415419,
+        19.0513722
+      ],
+      "last": [
+        72.8422445,
+        19.0516405
+      ]
+    },
+    {
+      "osmId": "436692573",
+      "name": "Western Railway",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 65.1,
+      "deckLenM": 65.1,
+      "waterOverlapM": 63.7,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84193400000001,
+        "lat": 19.050850750000002
+      },
+      "note": "WR parallel track bridge over Mithi",
+      "first": [
+        72.8420479,
+        19.0505771
+      ],
+      "last": [
+        72.8418201,
+        19.0511244
+      ]
+    },
+    {
+      "osmId": "436692571",
+      "name": "Western Railway",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 65.9,
+      "deckLenM": 65.9,
+      "waterOverlapM": 64.7,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84197735000001,
+        "lat": 19.050865299999998
+      },
+      "note": "WR parallel track bridge over Mithi",
+      "first": [
+        72.8420912,
+        19.0505875
+      ],
+      "last": [
+        72.8418635,
+        19.0511431
+      ]
+    },
+    {
+      "osmId": "46417986",
+      "name": "Western Express Highway",
+      "highway": "motorway",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 78,
+      "deckLenM": 78,
+      "waterOverlapM": 0,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8420115,
+        "lat": 19.05129185
+      },
+      "note": "WEH carriageway bridge over Mithi near Mahim",
+      "first": [
+        72.8423536,
+        19.0514282
+      ],
+      "last": [
+        72.8416694,
+        19.0511555
+      ]
+    },
+    {
+      "osmId": "107295496",
+      "name": "Western Railway",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "EXISTING",
+      "decision": "REJECT_DUPLICATE",
+      "srcLenM": 61,
+      "deckLenM": 61,
+      "waterOverlapM": 61,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8420833,
+        "lat": 19.0508807
+      },
+      "note": "WR slow lines Bridge No.20 over Mithi (recently reconstructed) | Duplicate near 436692571,107295497,436692573,107295478",
+      "first": [
+        72.8419644,
+        19.0511322
+      ],
+      "last": [
+        72.8422022,
+        19.0506292
+      ]
+    },
+    {
+      "osmId": "107295477",
+      "name": "Western Railway (Slow)",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 61.3,
+      "deckLenM": 61.3,
+      "waterOverlapM": 61.3,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84212360000001,
+        "lat": 19.05090395
+      },
+      "note": "Has water intersection but not on verified EXISTING whitelist — hidden until confirmed",
+      "first": [
+        72.8422429,
+        19.0506508
+      ],
+      "last": [
+        72.8420043,
+        19.0511571
+      ]
+    },
+    {
+      "osmId": "107295500",
+      "name": "Western Railway (Fast)",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 61.9,
+      "deckLenM": 61.9,
+      "waterOverlapM": 61.9,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84217395,
+        "lat": 19.050919450000002
+      },
+      "note": "Has water intersection but not on verified EXISTING whitelist — hidden until confirmed",
+      "first": [
+        72.842298,
+        19.0506657
+      ],
+      "last": [
+        72.8420499,
+        19.0511732
+      ]
+    },
+    {
+      "osmId": "107295483",
+      "name": "Western Railway (Fast)",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 61.8,
+      "deckLenM": 61.8,
+      "waterOverlapM": 61.8,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8422199,
+        "lat": 19.0509403
+      },
+      "note": "Has water intersection but not on verified EXISTING whitelist — hidden until confirmed",
+      "first": [
+        72.8420997,
+        19.0511953
+      ],
+      "last": [
+        72.8423401,
+        19.0506853
+      ]
+    },
+    {
+      "osmId": "107295478",
+      "name": "Central Railway Harbour Line",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 63.5,
+      "deckLenM": 63.5,
+      "waterOverlapM": 63.5,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8423025,
+        "lat": 19.050963099999997
+      },
+      "note": "Harbour Line parallel span",
+      "first": [
+        72.8424275,
+        19.0507018
+      ],
+      "last": [
+        72.8421775,
+        19.0512244
+      ]
+    },
+    {
+      "osmId": "107295497",
+      "name": "Central Railway Harbour Line",
+      "highway": "railway",
+      "railway": "rail",
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 63.7,
+      "deckLenM": 63.7,
+      "waterOverlapM": 63.7,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8423478,
+        "lat": 19.0509823
+      },
+      "note": "Harbour Line bridge over Mithi near Mahim/Bandra",
+      "first": [
+        72.8422261,
+        19.0512463
+      ],
+      "last": [
+        72.8424695,
+        19.0507183
+      ]
+    },
+    {
+      "osmId": "39700699",
+      "name": "Bridge 39700699",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 81,
+      "deckLenM": 81,
+      "waterOverlapM": 81,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84323660000001,
+        "lat": 19.0512837
+      },
+      "note": "Not verified against satellite / infrastructure records",
+      "first": [
+        72.8430931,
+        19.0516237
+      ],
+      "last": [
+        72.8433801,
+        19.0509437
+      ]
+    },
+    {
+      "osmId": "990567496",
+      "name": "Bridge 990567496",
+      "highway": "road",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 83.7,
+      "deckLenM": 83.7,
+      "waterOverlapM": 83.7,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84329545,
+        "lat": 19.051306
+      },
+      "note": "Insufficient evidence of a discrete river bridge; excluded from default scene",
+      "first": [
+        72.8431446,
+        19.0516561
+      ],
+      "last": [
+        72.8434463,
+        19.0509559
+      ]
+    },
+    {
+      "osmId": "107295495",
+      "name": "Sion–Bandra Link Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 95.1,
+      "deckLenM": 95.1,
+      "waterOverlapM": 94.6,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84802515,
+        "lat": 19.0518115
+      },
+      "note": "Sion–Bandra Link Road over Mithi (Dharavi corridor)",
+      "first": [
+        72.8482915,
+        19.0514639
+      ],
+      "last": [
+        72.8477588,
+        19.0521591
+      ]
+    },
+    {
+      "osmId": "151938283",
+      "name": "Sion–Bandra Link Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 95.1,
+      "deckLenM": 95.1,
+      "waterOverlapM": 88.7,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.84812074999999,
+        "lat": 19.05187695
+      },
+      "note": "Dual carriageway of Sion–Bandra Link Road",
+      "first": [
+        72.8478544,
+        19.0522245
+      ],
+      "last": [
+        72.8483871,
+        19.0515294
+      ]
+    },
+    {
+      "osmId": "27055934",
+      "name": "Bandra Kurla Complex Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "REJECT_DUPLICATE",
+      "srcLenM": 99.2,
+      "deckLenM": 99.2,
+      "waterOverlapM": 76.5,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.857205,
+        "lat": 19.06020015
+      },
+      "note": "BKC Road western Mithi crossing | Duplicate near 1330234680,49037280",
+      "first": [
+        72.8567907,
+        19.0599864
+      ],
+      "last": [
+        72.8576193,
+        19.0604139
+      ]
+    },
+    {
+      "osmId": "49037280",
+      "name": "Bandra Kurla Complex Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 99.8,
+      "deckLenM": 99.8,
+      "waterOverlapM": 78,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.85728040000001,
+        "lat": 19.06005485
+      },
+      "note": "BKC Road western dual carriageway",
+      "first": [
+        72.8576975,
+        19.0602701
+      ],
+      "last": [
+        72.8568633,
+        19.0598396
+      ]
+    },
+    {
+      "osmId": "1330234680",
+      "name": "BKC Bridge",
+      "highway": "road",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 228.9,
+      "deckLenM": 228.9,
+      "waterOverlapM": 172.5,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.85741754900984,
+        "lat": 19.060410055225002
+      },
+      "note": "Mapped BKC Bridge OSM way over Mithi",
+      "first": [
+        72.857101,
+        19.0598084
+      ],
+      "last": [
+        72.857101,
+        19.0598084
+      ]
+    },
+    {
+      "osmId": "618038082",
+      "name": "BKC Connector",
+      "highway": "secondary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 1437.7,
+      "deckLenM": 269.2,
+      "waterOverlapM": 269.2,
+      "geometryMode": "OSM_WATER_CLIP",
+      "midpoint": {
+        "lon": 72.86518815238269,
+        "lat": 19.055154994360745
+      },
+      "note": "BKC Connector elevated way — water-crossing OSM segment only",
+      "first": [
+        72.8734572,
+        19.050191
+      ],
+      "last": [
+        72.8645763,
+        19.0576205
+      ]
+    },
+    {
+      "osmId": "746615682",
+      "name": "BKC Connector",
+      "highway": "secondary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 1421.1,
+      "deckLenM": 255.5,
+      "waterOverlapM": 255.5,
+      "geometryMode": "OSM_WATER_CLIP",
+      "midpoint": {
+        "lon": 72.86528510686318,
+        "lat": 19.055179588262654
+      },
+      "note": "BKC Connector dual — water-crossing OSM segment only",
+      "first": [
+        72.8646716,
+        19.057634
+      ],
+      "last": [
+        72.8734277,
+        19.0502644
+      ]
+    },
+    {
+      "osmId": "1158399734",
+      "name": "Santa Cruz–Chembur Link Road",
+      "highway": "trunk",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "REJECT_DUPLICATE",
+      "srcLenM": 50.3,
+      "deckLenM": 50.3,
+      "waterOverlapM": 43.5,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.87159425,
+        "lat": 19.07483895
+      },
+      "note": "SCLR dual carriageway | Duplicate near 1122421036,1158399732",
+      "first": [
+        72.8713758,
+        19.0747464
+      ],
+      "last": [
+        72.8718127,
+        19.0749315
+      ]
+    },
+    {
+      "osmId": "1158399732",
+      "name": "Santa Cruz–Chembur Link Road",
+      "highway": "trunk",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 56.7,
+      "deckLenM": 56.7,
+      "waterOverlapM": 44,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.87168249999999,
+        "lat": 19.07458805
+      },
+      "note": "SCLR trunk bridge over Mithi",
+      "first": [
+        72.8719295,
+        19.0746908
+      ],
+      "last": [
+        72.8714355,
+        19.0744853
+      ]
+    },
+    {
+      "osmId": "1509555857",
+      "name": "Bridge 1509555857",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 64.2,
+      "deckLenM": 64.2,
+      "waterOverlapM": 51.2,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.87169465,
+        "lat": 19.0746393
+      },
+      "note": "Not verified against satellite / infrastructure records",
+      "first": [
+        72.8719734,
+        19.074757
+      ],
+      "last": [
+        72.8714159,
+        19.0745216
+      ]
+    },
+    {
+      "osmId": "1122421036",
+      "name": "SCLR Flyover",
+      "highway": "trunk",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 742,
+      "deckLenM": 80.4,
+      "waterOverlapM": 80.4,
+      "geometryMode": "OSM_WATER_CLIP",
+      "midpoint": {
+        "lon": 72.87181405902678,
+        "lat": 19.07485522630951
+      },
+      "note": "SCLR flyover span over Mithi (water-crossing segment of OSM way)",
+      "first": [
+        72.8664424,
+        19.0725062
+      ],
+      "last": [
+        72.8728368,
+        19.0753367
+      ]
+    },
+    {
+      "osmId": "1562122423",
+      "name": "BKC–SCLR Connector",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "REJECT_DUPLICATE",
+      "srcLenM": 1035.2,
+      "deckLenM": 78.3,
+      "waterOverlapM": 78.3,
+      "geometryMode": "OSM_WATER_CLIP",
+      "midpoint": {
+        "lon": 72.87182367818863,
+        "lat": 19.074810364578198
+      },
+      "note": "BKC–SCLR connector — water-crossing OSM segment only | Duplicate near 1122421036",
+      "first": [
+        72.8711468,
+        19.0710345
+      ],
+      "last": [
+        72.8766069,
+        19.0764911
+      ]
+    },
+    {
+      "osmId": "1122421034",
+      "name": "Bridge 1122421034",
+      "highway": "trunk",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 2639.2,
+      "deckLenM": 76.1,
+      "waterOverlapM": 76.1,
+      "geometryMode": "OSM_WATER_CLIP",
+      "midpoint": {
+        "lon": 72.87183338017081,
+        "lat": 19.074765246122716
+      },
+      "note": "Insufficient evidence of a discrete river bridge; excluded from default scene",
+      "first": [
+        72.8728796,
+        19.0752569
+      ],
+      "last": [
+        72.8512201,
+        19.0738728
+      ]
+    },
+    {
+      "osmId": "260786314",
+      "name": "Bandra Kurla Complex Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 120.4,
+      "deckLenM": 120.4,
+      "waterOverlapM": 114.6,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.87340265,
+        "lat": 19.07094695
+      },
+      "note": "BKC Road eastern Mithi crossing",
+      "first": [
+        72.8739703,
+        19.0708785
+      ],
+      "last": [
+        72.872835,
+        19.0710154
+      ]
+    },
+    {
+      "osmId": "260786315",
+      "name": "Bandra Kurla Complex Road",
+      "highway": "primary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 122.5,
+      "deckLenM": 122.5,
+      "waterOverlapM": 112.2,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.87341185,
+        "lat": 19.0710866
+      },
+      "note": "BKC Road eastern dual carriageway",
+      "first": [
+        72.8728377,
+        19.0711781
+      ],
+      "last": [
+        72.873986,
+        19.0709951
+      ]
+    },
+    {
+      "osmId": "436370623",
+      "name": "Kalina–Kurla Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 95.7,
+      "deckLenM": 95.7,
+      "waterOverlapM": 95.6,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8762121,
+        "lat": 19.0788089
+      },
+      "note": "Kalina–Kurla Road over Mithi",
+      "first": [
+        72.8766186,
+        19.0786152
+      ],
+      "last": [
+        72.8758056,
+        19.0790026
+      ]
+    },
+    {
+      "osmId": "1509555862",
+      "name": "Kalina–Kurla Road",
+      "highway": "secondary",
+      "railway": null,
+      "status": "EXISTING",
+      "decision": "KEEP_EXISTING",
+      "srcLenM": 96.2,
+      "deckLenM": 96.2,
+      "waterOverlapM": 94,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.8762359,
+        "lat": 19.078870600000002
+      },
+      "note": "Kalina–Kurla dual carriageway",
+      "first": [
+        72.8758261,
+        19.0790636
+      ],
+      "last": [
+        72.8766457,
+        19.0786776
+      ]
+    },
+    {
+      "osmId": "367484575",
+      "name": "Bridge 367484575",
+      "highway": "residential",
+      "railway": null,
+      "status": "UNVERIFIED",
+      "decision": "HIDE_UNVERIFIED",
+      "srcLenM": 112.6,
+      "deckLenM": 112.6,
+      "waterOverlapM": 95.4,
+      "geometryMode": "OSM_FULL",
+      "midpoint": {
+        "lon": 72.87857375,
+        "lat": 19.0851361
+      },
+      "note": "Insufficient evidence of a discrete river bridge; excluded from default scene",
+      "first": [
+        72.878057,
+        19.0852682
+      ],
+      "last": [
+        72.8790905,
+        19.085004
+      ]
+    }
+  ],
+  "rendered": [
+    {
+      "osmId": "46417981",
+      "name": "Mahim Causeway",
+      "status": "EXISTING",
+      "lengthM": 59,
+      "waterOverlapM": 52.1,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "48803916",
+      "name": "Mahim Causeway",
+      "status": "EXISTING",
+      "lengthM": 58.5,
+      "waterOverlapM": 50.9,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "46417988",
+      "name": "Western Express Highway",
+      "status": "EXISTING",
+      "lengthM": 79.7,
+      "waterOverlapM": 0,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "436692573",
+      "name": "Western Railway",
+      "status": "EXISTING",
+      "lengthM": 65.1,
+      "waterOverlapM": 63.7,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "436692571",
+      "name": "Western Railway",
+      "status": "EXISTING",
+      "lengthM": 65.9,
+      "waterOverlapM": 64.7,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "46417986",
+      "name": "Western Express Highway",
+      "status": "EXISTING",
+      "lengthM": 78,
+      "waterOverlapM": 0,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "107295478",
+      "name": "Central Railway Harbour Line",
+      "status": "EXISTING",
+      "lengthM": 63.5,
+      "waterOverlapM": 63.5,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "107295497",
+      "name": "Central Railway Harbour Line",
+      "status": "EXISTING",
+      "lengthM": 63.7,
+      "waterOverlapM": 63.7,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "107295495",
+      "name": "Sion–Bandra Link Road",
+      "status": "EXISTING",
+      "lengthM": 95.1,
+      "waterOverlapM": 94.6,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "151938283",
+      "name": "Sion–Bandra Link Road",
+      "status": "EXISTING",
+      "lengthM": 95.1,
+      "waterOverlapM": 88.7,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "49037280",
+      "name": "Bandra Kurla Complex Road",
+      "status": "EXISTING",
+      "lengthM": 99.8,
+      "waterOverlapM": 78,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "1330234680",
+      "name": "BKC Bridge",
+      "status": "EXISTING",
+      "lengthM": 228.9,
+      "waterOverlapM": 172.5,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "618038082",
+      "name": "BKC Connector",
+      "status": "EXISTING",
+      "lengthM": 269.2,
+      "waterOverlapM": 269.2,
+      "geometryMode": "OSM_WATER_CLIP"
+    },
+    {
+      "osmId": "746615682",
+      "name": "BKC Connector",
+      "status": "EXISTING",
+      "lengthM": 255.5,
+      "waterOverlapM": 255.5,
+      "geometryMode": "OSM_WATER_CLIP"
+    },
+    {
+      "osmId": "1158399732",
+      "name": "Santa Cruz–Chembur Link Road",
+      "status": "EXISTING",
+      "lengthM": 56.7,
+      "waterOverlapM": 44,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "1122421036",
+      "name": "SCLR Flyover",
+      "status": "EXISTING",
+      "lengthM": 80.4,
+      "waterOverlapM": 80.4,
+      "geometryMode": "OSM_WATER_CLIP"
+    },
+    {
+      "osmId": "260786314",
+      "name": "Bandra Kurla Complex Road",
+      "status": "EXISTING",
+      "lengthM": 120.4,
+      "waterOverlapM": 114.6,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "260786315",
+      "name": "Bandra Kurla Complex Road",
+      "status": "EXISTING",
+      "lengthM": 122.5,
+      "waterOverlapM": 112.2,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "436370623",
+      "name": "Kalina–Kurla Road",
+      "status": "EXISTING",
+      "lengthM": 95.7,
+      "waterOverlapM": 95.6,
+      "geometryMode": "OSM_FULL"
+    },
+    {
+      "osmId": "1509555862",
+      "name": "Kalina–Kurla Road",
+      "status": "EXISTING",
+      "lengthM": 96.2,
+      "waterOverlapM": 94,
+      "geometryMode": "OSM_FULL"
+    }
+  ]
+}

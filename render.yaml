@@ -1,0 +1,32 @@
+# Render Blueprint — history API + managed Postgres
+# Apply from Render Dashboard → New → Blueprint (do not auto-apply without approval).
+# Frontend is recommended on Vercel; optional static site can be added later.
+
+databases:
+  - name: mithi-river-db
+    plan: free
+    databaseName: mithi_river
+    user: mithi
+
+services:
+  - type: web
+    name: mithi-history-api
+    runtime: node
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MITHI_PROJECT_ID
+        value: mithi
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mithi-river-db
+          property: connectionString
+      - key: PG_POOL_MAX
+        value: "10"
+      - key: HISTORY_REQUEST_TIMEOUT_MS
+        value: "25000"

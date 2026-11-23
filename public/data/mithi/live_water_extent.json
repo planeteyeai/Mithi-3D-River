@@ -1,0 +1,27 @@
+{
+  "river": "Mithi",
+  "product": "Sentinel-2 MNDWI live water",
+  "bounds": {
+    "north": 19.08782672,
+    "south": 19.04514933,
+    "east": 72.87929619,
+    "west": 72.83456075
+  },
+  "overlay": "/data/mithi/mithi_river_water_overlay.png",
+  "kml": "/data/mithi/mithi_river_water.kml",
+  "polygons": "/data/mithi/mithi_mndwi_water_polygons.geojson",
+  "source": "src/data/water_depth (1).kml (Live Water - 2026-11-07)",
+  "frequencyThreshold": 0.5,
+  "window": [
+    "2026-10-13",
+    "2026-11-12"
+  ],
+  "kmlAreaHa": 72.48201756266876,
+  "maskAreaHa": 72.98293,
+  "rasterSize": [
+    1497,
+    1428
+  ],
+  "minAlpha": 77,
+  "updatedAt": "2026-11-19"
+}

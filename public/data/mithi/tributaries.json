@@ -1,0 +1,10 @@
+{
+  "river": "Mithi",
+  "streams": [
+    { "name": "Upstream 01", "osmId": "mithi-joining-1" },
+    { "name": "Upstream 02", "osmId": "mithi-joining-2" },
+    { "name": "Upstream 03", "osmId": "mithi-joining-3" },
+    { "name": "Upstream 04", "osmId": "mithi-joining-4" },
+    { "name": "Upstream 05", "osmId": "mithi-joining-5" }
+  ]
+}

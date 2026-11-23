@@ -1,0 +1,49 @@
+{
+  "name": "mithi-river",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5180",
+    "dev:server": "npm --prefix server run start",
+    "dev:server:watch": "npm --prefix server run dev",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:logs": "docker compose logs -f postgres",
+    "db:psql": "docker exec -it mithi_postgres psql -U mithi -d mithi_river",
+    "db:tables": "docker exec mithi_postgres psql -U mithi -d mithi_river -c \"\\dt+\" -c \"SELECT id, component_type, data_date, kml_type, source, fetched_at, pg_column_size(payload) AS payload_bytes FROM component_history ORDER BY fetched_at DESC LIMIT 50;\"",
+    "db:peek": "docker exec mithi_postgres psql -U mithi -d mithi_river -c \"SELECT id, component_type, data_date, kml_type, left(payload::text, 200) AS payload_preview FROM component_history ORDER BY id DESC LIMIT 10;\"",
+    "db:seed-demos": "node server/seedLocalSnapshots.js",
+    "stack:up": "docker compose up -d postgres history-api",
+    "stack:down": "docker compose down",
+    "stack:logs": "docker compose logs -f postgres history-api",
+    "dev:all": "npm run db:up && npm run history:install && npm run dev:server",
+    "history:install": "npm --prefix server install",
+    "history:health": "node -e \"fetch('http://127.0.0.1:5181/api/health').then(async r=>{console.log(await r.text()); process.exit(r.ok?0:1)}).catch(e=>{console.error(e); process.exit(1)})\"",
+    "build": "vite build",
+    "preview": "vite preview --port 5180",
+    "process:updates": "node scripts/process_updates_assets.mjs",
+    "validate:updates": "node scripts/validate_updates_coords.mjs",
+    "verify:ships": "node scripts/verify_ship_models.mjs",
+    "fetch:mithi-osm": "node scripts/fetch_mithi_osm_corridor.mjs && node scripts/filter_mithi_river_bridges.mjs && node scripts/densify_mithi_mangroves.mjs",
+    "rebuild:mithi-water": "node scripts/restore_mithi_original_water.mjs",
+    "rebuild:mithi-centerline": "node scripts/rebuild_mithi_centerline.mjs",
+    "set:mithi-bridges": "node scripts/audit_and_filter_mithi_bridges.mjs",
+    "audit:mithi-bridges": "node scripts/audit_and_filter_mithi_bridges.mjs",
+    "densify:mithi-mangroves": "node scripts/densify_mithi_mangroves.mjs",
+    "pre-deploy": "node scripts/pre-deploy-check.mjs"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "geotiff": "^2.1.3",
+    "lucide": "^0.469.0",
+    "proj4": "^2.15.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}

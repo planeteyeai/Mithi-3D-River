@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mithi River Depth</name>
+    <description>Sentinel-2 relative depth. Image date: 2026-11-12. Analysis date: 2026-11-16. Water area: 78.4767332185155 ha. Depth range: 0.2-5.5 m. Depth is a relative band-ratio estimate and is not survey-grade bathymetry.</description>
+    <GroundOverlay>
+      <name>Mithi River Depth</name>
+      <color>ccffffff</color>
+      <Icon><href>water_depth_overlay.png</href></Icon>
+      <LatLonBox>
+        <north>19.08782672</north>
+        <south>19.04514933</south>
+        <east>72.87929619</east>
+        <west>72.83456075</west>
+        <rotation>0</rotation>
+      </LatLonBox>
+    </GroundOverlay>
+  </Document>
+</kml>

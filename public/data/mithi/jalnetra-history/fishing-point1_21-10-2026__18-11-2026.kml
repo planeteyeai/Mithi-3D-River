@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ns0:kml xmlns:ns0="http://www.opengis.net/kml/2.2">
+  <ns0:Document>
+    <ns0:name>Fishing Points — Robust Hotspots</ns0:name>
+    <ns0:description>Robust fishing suitability hotspots (remote-sensing proxy). Not a measure of fish abundance or water quality.</ns0:description>
+    <ns0:Style id="fishIcon">
+      <ns0:IconStyle>
+        <ns0:scale>1.2</ns0:scale>
+        <ns0:Icon>
+          <ns0:href>http://maps.google.com/mapfiles/kml/shapes/fishing.png</ns0:href>
+        </ns0:Icon>
+      </ns0:IconStyle>
+      <ns0:LabelStyle>
+        <ns0:scale>0.8</ns0:scale>
+      </ns0:LabelStyle>
+    </ns0:Style>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 1</ns0:name>
+      <ns0:description>Lat: 19.048686
+Lon: 72.837469
+Suitability: 0.3271</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.837469,19.048686,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 2</ns0:name>
+      <ns0:description>Lat: 19.048326
+Lon: 72.840703
+Suitability: 0.3145</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.840703,19.048326,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 3</ns0:name>
+      <ns0:description>Lat: 19.048865
+Lon: 72.835673
+Suitability: 0.3131</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.835673,19.048865,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 4</ns0:name>
+      <ns0:description>Lat: 19.05174
+Lon: 72.846453
+Suitability: 0.311</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.846453,19.05174,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 5</ns0:name>
+      <ns0:description>Lat: 19.058567
+Lon: 72.857232
+Suitability: 0.3092</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.857232,19.058567,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 6</ns0:name>
+      <ns0:description>Lat: 19.055872
+Lon: 72.864598
+Suitability: 0.3068</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.864598,19.055872,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 7</ns0:name>
+      <ns0:description>Lat: 19.05156
+Lon: 72.845734
+Suitability: 0.3057</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.845734,19.05156,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 8</ns0:name>
+      <ns0:description>Lat: 19.05174
+Lon: 72.846632
+Suitability: 0.3052</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.846632,19.05174,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 9</ns0:name>
+      <ns0:description>Lat: 19.060544
+Lon: 72.869809
+Suitability: 0.3048</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.869809,19.060544,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 10</ns0:name>
+      <ns0:description>Lat: 19.05156
+Lon: 72.844836
+Suitability: 0.3043</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.844836,19.05156,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 11</ns0:name>
+      <ns0:description>Lat: 19.056232
+Lon: 72.866934
+Suitability: 0.3014</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.866934,19.056232,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 12</ns0:name>
+      <ns0:description>Lat: 19.055872
+Lon: 72.865317
+Suitability: 0.3</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.865317,19.055872,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 13</ns0:name>
+      <ns0:description>Lat: 19.056232
+Lon: 72.861724
+Suitability: 0.3</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.861724,19.056232,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 14</ns0:name>
+      <ns0:description>Lat: 19.057669
+Lon: 72.86927
+Suitability: 0.2997</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.86927,19.057669,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+    <ns0:Placemark>
+      <ns0:name>Fishing point 15</ns0:name>
+      <ns0:description>Lat: 19.059286
+Lon: 72.86927
+Suitability: 0.2995</ns0:description>
+      <ns0:styleUrl>#fishIcon</ns0:styleUrl>
+      <ns0:Point>
+        <ns0:coordinates>72.86927,19.059286,0</ns0:coordinates>
+      </ns0:Point>
+    </ns0:Placemark>
+  </ns0:Document>
+</ns0:kml>

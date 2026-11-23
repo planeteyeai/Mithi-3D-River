@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>Vegetation Health Score</name>
+<description>Vegetation health (50% NDVI · 30% NDMI · 20% EVI)
+VEGETATION HEALTH SCORE
+#006400  80-100  Very Healthy
+#32CD32  65-80  Healthy
+#FFFF00  50-65  Moderate
+#FF8C00  35-50  Poor
+#FF0000  0-35  Critical</description>
+<GroundOverlay>
+<name>Vegetation Health</name>
+<Icon><href>/data/hydrology/vegetation/vegetation_health_overlay.png</href></Icon>
+<LatLonBox>
+<north>19.10610744</north><south>19.02674113</south><east>72.89905415</east><west>72.81483231</west>
+</LatLonBox>
+</GroundOverlay>
+</Document></kml>

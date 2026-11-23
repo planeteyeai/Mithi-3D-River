@@ -1,0 +1,10 @@
+{
+  "west": 72.825,
+  "south": 19.035,
+  "east": 72.895,
+  "north": 19.115,
+  "source": "Esri World Imagery",
+  "attribution": "Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+  "path": "satellite_imagery.jpg",
+  "generated_at": "2026-11-19T09:42:32.724Z"
+}

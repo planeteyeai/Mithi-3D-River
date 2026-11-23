@@ -1,0 +1,380 @@
+{
+  "river": "Mithi",
+  "note": "Documented digitization intents for EXISTING priority crossings. Centerlines are completed along original OSM headings to dry bank landings at published/satellite structure scale — never stretched to the inflated AOI lobe width.",
+  "bridges": [
+    {
+      "osmId": "46417981",
+      "name": "Mahim Causeway",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 16,
+      "highway": "primary",
+      "evidence": "BMC: existing deck ~44.1–46 m waterway / ~46–59 m structure; dual west carriageway; abutments to SV Road approaches",
+      "coords": [
+        [
+          72.83824671007925,
+          19.047812329969908
+        ],
+        [
+          72.83823915,
+          19.04825555
+        ],
+        [
+          72.83823313279409,
+          19.048608316962728
+        ]
+      ],
+      "lengthM": 88.5,
+      "waterOverlapM": 56,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "48803916",
+      "name": "Mahim Causeway",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 16,
+      "highway": "primary",
+      "evidence": "Dual east carriageway of Mahim Causeway; satellite dual deck",
+      "coords": [
+        [
+          72.83834697817922,
+          19.04861241611476
+        ],
+        [
+          72.83835305,
+          19.04825965
+        ],
+        [
+          72.83836192419959,
+          19.04774406875535
+        ]
+      ],
+      "lengthM": 96.6,
+      "waterOverlapM": 64,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "46417988",
+      "name": "Western Express Highway",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 18,
+      "highway": "motorway",
+      "evidence": "WEH carriageway over Mithi at Mahim; OSM way sits beside channel (waterOverlap 0) — digitize along OSM heading through nearest water to abutments",
+      "coords": [
+        [
+          72.84189667869994,
+          19.051160311930367
+        ],
+        [
+          72.8420642660659,
+          19.051224308073675
+        ],
+        [
+          72.84297276599717,
+          19.05157123453476
+        ]
+      ],
+      "lengthM": 122,
+      "waterOverlapM": 112,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "46417986",
+      "name": "Western Express Highway",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 18,
+      "highway": "motorway",
+      "evidence": "WEH dual carriageway over Mithi at Mahim; parallel to 46417988",
+      "coords": [
+        [
+          72.84288490575659,
+          19.05154686674856
+        ],
+        [
+          72.8419819832676,
+          19.05118699103568
+        ],
+        [
+          72.84183295722573,
+          19.05112759407336
+        ]
+      ],
+      "lengthM": 120,
+      "waterOverlapM": 110,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "436692571",
+      "name": "Western Railway",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 10,
+      "highway": "railway",
+      "railway": "rail",
+      "evidence": "WR Bridge No.20 Mahim–Bandra; published span ~50–60 m; abutments beyond water",
+      "coords": [
+        [
+          72.84228129999522,
+          19.050123645993228
+        ],
+        [
+          72.84197735000001,
+          19.050865299999998
+        ],
+        [
+          72.84181155909353,
+          19.051269838549146
+        ]
+      ],
+      "lengthM": 136.7,
+      "waterOverlapM": 114,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "436692573",
+      "name": "Western Railway",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 10,
+      "highway": "railway",
+      "railway": "rail",
+      "evidence": "WR parallel track; satellite multi-track corridor",
+      "coords": [
+        [
+          72.84224205549812,
+          19.050110632466545
+        ],
+        [
+          72.84193400000001,
+          19.050850750000002
+        ],
+        [
+          72.84176596972831,
+          19.051254450472797
+        ]
+      ],
+      "lengthM": 136.7,
+      "waterOverlapM": 114,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "107295497",
+      "name": "Central Railway Harbour Line",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 10,
+      "highway": "railway",
+      "railway": "rail",
+      "evidence": "Harbour Line bridge over Mithi; abutments to approach embankments",
+      "coords": [
+        [
+          72.84214158427734,
+          19.05142963731125
+        ],
+        [
+          72.8423478,
+          19.0509823
+        ],
+        [
+          72.84268385525172,
+          19.050253305863148
+        ]
+      ],
+      "lengthM": 142.7,
+      "waterOverlapM": 132,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "107295478",
+      "name": "Central Railway Harbour Line",
+      "status": "EXISTING",
+      "geometrySource": "MANUAL_DIGITIZED_SATELLITE",
+      "digitizeAlongOsm": true,
+      "widthM": 10,
+      "highway": "railway",
+      "railway": "rail",
+      "evidence": "Harbour Line parallel span",
+      "coords": [
+        [
+          72.84264908969425,
+          19.05023858890314
+        ],
+        [
+          72.8423025,
+          19.050963099999997
+        ],
+        [
+          72.84208981996035,
+          19.051407686354885
+        ]
+      ],
+      "lengthM": 142.7,
+      "waterOverlapM": 128,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+    },
+    {
+      "osmId": "107295495",
+      "name": "Sion–Bandra Link Road",
+      "status": "EXISTING",
+      "geometrySource": "OSM_CHAIN_WATER_CLIP",
+      "digitizeAlongOsm": false,
+      "widthM": 14,
+      "highway": "primary",
+      "evidence": "Stitched OSM Sion Bandra Link Road ways 22859121→107295495→1154760961→151938285; water-clip of original OSM vertices to dry abutments (not invented coords). Short bridge=yes stub alone did not reach opposite bank.",
+      "coords": [
+        [
+          72.85174609465282,
+          19.046848137530983
+        ],
+        [
+          72.8516794,
+          19.0469552
+        ],
+        [
+          72.8514669,
+          19.0472582
+        ],
+        [
+          72.8491451,
+          19.0503333
+        ],
+        [
+          72.8482915,
+          19.0514639
+        ],
+        [
+          72.8477588,
+          19.0521591
+        ],
+        [
+          72.84767457846633,
+          19.05226870336573
+        ]
+      ],
+      "lengthM": 736.7,
+      "waterOverlapM": 670,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "usePackCoords": false,
+      "chainWayIds": [
+        "22859121",
+        "107295495",
+        "1154760961",
+        "151938285"
+      ]
+    },
+    {
+      "osmId": "151938283",
+      "name": "Sion–Bandra Link Road",
+      "status": "EXISTING",
+      "geometrySource": "OSM_CHAIN_WATER_CLIP",
+      "digitizeAlongOsm": false,
+      "widthM": 14,
+      "highway": "primary",
+      "evidence": "Dual carriageway stitch OSM 1235767980→151938283→1251127689→1253603265; water-clip of original OSM vertices to dry abutments.",
+      "coords": [
+        [
+          72.84762528596029,
+          19.052527077669872
+        ],
+        [
+          72.8478544,
+          19.0522245
+        ],
+        [
+          72.8483871,
+          19.0515294
+        ],
+        [
+          72.85164127903657,
+          19.047250868744502
+        ]
+      ],
+      "lengthM": 720.2,
+      "waterOverlapM": 617.3,
+      "appliedProvenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "usePackCoords": false,
+      "chainWayIds": [
+        "1235767980",
+        "151938283",
+        "1251127689",
+        "1253603265"
+      ]
+    },
+    {
+      "osmId": "618038082",
+      "name": "BKC Connector",
+      "status": "EXISTING",
+      "geometrySource": "OSM_WATER_CLIP_PLUS_ABUTMENT",
+      "usePackCoords": true,
+      "widthM": 12,
+      "highway": "secondary",
+      "evidence": "Keep OSM water-clip — already spans channel (~269 m); pad abutments only if ends wet",
+      "coords": [
+        [
+          72.86583642141207,
+          19.05365256362829
+        ],
+        [
+          72.8649328,
+          19.0557468
+        ],
+        [
+          72.8648268,
+          19.0559952
+        ],
+        [
+          72.86471104995546,
+          19.05633581478078
+        ]
+      ],
+      "lengthM": 321.1,
+      "waterOverlapM": 272,
+      "appliedProvenance": "OSM_CLIP_PADDED_ABUTMENT"
+    },
+    {
+      "osmId": "746615682",
+      "name": "BKC Connector",
+      "status": "EXISTING",
+      "geometrySource": "OSM_WATER_CLIP_PLUS_ABUTMENT",
+      "usePackCoords": true,
+      "widthM": 12,
+      "highway": "secondary",
+      "evidence": "Keep OSM water-clip — dual BKC Connector",
+      "coords": [
+        [
+          72.86481508069105,
+          19.05634079331586
+        ],
+        [
+          72.8648535,
+          19.0562292
+        ],
+        [
+          72.8649253,
+          19.0560207
+        ],
+        [
+          72.8650263,
+          19.0557835
+        ],
+        [
+          72.86592417940066,
+          19.053688347259055
+        ]
+      ],
+      "lengthM": 317.2,
+      "waterOverlapM": 260,
+      "appliedProvenance": "OSM_CLIP_PADDED_ABUTMENT"
+    }
+  ]
+}

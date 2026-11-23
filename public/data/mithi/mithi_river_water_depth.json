@@ -1,0 +1,53 @@
+{
+  "river": "Mithi",
+  "bounds": {
+    "north": 19.08782672,
+    "south": 19.04514933,
+    "east": 72.87929619,
+    "west": 72.83456075
+  },
+  "overlay": "/data/mithi/mithi_river_depth_overlay.png",
+  "kml": "/data/mithi/mithi_river_depth.kml",
+  "waterOverlay": "/data/mithi/mithi_river_water_overlay.png",
+  "waterKml": "/data/mithi/mithi_river_water.kml",
+  "source": {
+    "depth": "src/data/mithi_river_depth.kml (Water Depth - 2026-11-12)",
+    "water": "src/data/mithi_river_water.kml (Live Water - 2026-11-12)"
+  },
+  "minDepth": 0.2,
+  "maxDepth": 5.5,
+  "unit": "m",
+  "palette": "blue_shades",
+  "productDepthRange": [
+    0.2,
+    5.5
+  ],
+  "classes": [
+    {
+      "id": "shallow",
+      "label": "Shallow (<1.5 m)",
+      "color": "#7AD4F0",
+      "range": "< 1.5 m"
+    },
+    {
+      "id": "moderate",
+      "label": "Moderate (1.5\u20133.0 m)",
+      "color": "#3AA0D6",
+      "range": "1.5\u20133.0 m"
+    },
+    {
+      "id": "medium_deep",
+      "label": "Medium-Deep (3.0\u20134.5 m)",
+      "color": "#1E6EAA",
+      "range": "3.0\u20134.5 m"
+    },
+    {
+      "id": "deep",
+      "label": "Deep (>4.5 m)",
+      "color": "#0C4A7A",
+      "range": "> 4.5 m"
+    }
+  ],
+  "alwaysOn": true,
+  "updatedAt": "2026-11-16"
+}

@@ -1,0 +1,21 @@
+{
+  "river": "Mithi",
+  "centroid": {
+    "lon": 72.85692847407921,
+    "lat": 19.0664880258691
+  },
+  "bounds": {
+    "north": 19.0893267244805,
+    "south": 19.0436493272577,
+    "east": 72.8807961946018,
+    "west": 72.83306075355661
+  },
+  "summary": {
+    "tss_mg_l": 48,
+    "chlorophyll_ug_l": 12.4,
+    "salinity_psu": 2.1,
+    "ndci": 0.18,
+    "coliform_mpn": 2400,
+    "note": "Seed values for UI; replace with JalNetra / lab products when available."
+  }
+}

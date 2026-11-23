@@ -1,0 +1,124 @@
+[
+    {
+        "component":  "lithology",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "lithology1_21-10-2026|18-11-2026",
+        "fileName":  "lithology1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/lithology1_21-10-2026__18-11-2026.kml",
+        "bytes":  139602,
+        "sourceFile":  "lithology.kml"
+    },
+    {
+        "component":  "vegetation-health",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "vegetation-health1_21-10-2026|18-11-2026",
+        "fileName":  "vegetation-health1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/vegetation-health1_21-10-2026__18-11-2026.kml",
+        "bytes":  3818488,
+        "sourceFile":  "vegetation_health (1).kml"
+    },
+    {
+        "component":  "water-depth",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "water-depth1_21-10-2026|18-11-2026",
+        "fileName":  "water-depth1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/water-depth1_21-10-2026__18-11-2026.kml",
+        "bytes":  136347,
+        "sourceFile":  "mithi_river_depth.kml"
+    },
+    {
+        "component":  "live-water",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "live-water1_21-10-2026|18-11-2026",
+        "fileName":  "live-water1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/live-water1_21-10-2026__18-11-2026.kml",
+        "bytes":  377890,
+        "sourceFile":  "mithi_river_water.kml"
+    },
+    {
+        "component":  "main-bod-cod",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "main-bod-cod1_21-10-2026|18-11-2026",
+        "fileName":  "main-bod-cod1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/main-bod-cod1_21-10-2026__18-11-2026.kml",
+        "bytes":  655060,
+        "sourceFile":  "main_bod_cod_pixels (4).kml"
+    },
+    {
+        "component":  "streams-bod-cod",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "streams-bod-cod1_21-10-2026|18-11-2026",
+        "fileName":  "streams-bod-cod1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/streams-bod-cod1_21-10-2026__18-11-2026.kml",
+        "bytes":  211149,
+        "sourceFile":  "streams_bod_cod_pixels.kml"
+    },
+    {
+        "component":  "drainage",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "joining-stream1_21-10-2026|18-11-2026",
+        "fileName":  "joining-stream1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/joining-stream1_21-10-2026__18-11-2026.kml",
+        "bytes":  25313,
+        "sourceFile":  "drainage.kml",
+        "displayName":  "Joining Streams"
+    },
+    {
+        "component":  "bank-erosion",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "bank-erosion1_21-10-2026|18-11-2026",
+        "fileName":  "bank-erosion1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/bank-erosion1_21-10-2026__18-11-2026.kml",
+        "bytes":  1019689,
+        "sourceFile":  "bank_erosion_hotspots_2016_2026.kml"
+    },
+    {
+        "component":  "salinity",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "salinity1_21-10-2026|18-11-2026",
+        "fileName":  "salinity1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/salinity1_21-10-2026__18-11-2026.kml",
+        "bytes":  1177042,
+        "sourceFile":  "relative_salinity (2).kml"
+    },
+    {
+        "component":  "water-quality",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "water-quality1_21-10-2026|18-11-2026",
+        "fileName":  "water-quality1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/water-quality1_21-10-2026__18-11-2026.kml",
+        "bytes":  985669,
+        "sourceFile":  "water_quality (2).kml"
+    },
+    {
+        "component":  "fishing-point",
+        "version":  1,
+        "startDate":  "21-10-2026",
+        "endDate":  "18-11-2026",
+        "logicalName":  "fishing-point1_21-10-2026|18-11-2026",
+        "fileName":  "fishing-point1_21-10-2026__18-11-2026.kml",
+        "url":  "/data/mithi/jalnetra-history/fishing-point1_21-10-2026__18-11-2026.kml",
+        "bytes":  5498,
+        "sourceFile":  "fishing_points.kml"
+    }
+]

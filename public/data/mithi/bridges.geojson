@@ -1,0 +1,637 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "46417981",
+        "name": "Mahim Causeway",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 88.5,
+        "widthM": 16,
+        "waterOverlapM": 56,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.83824671007925,
+            19.047812329969908
+          ],
+          [
+            72.83823915,
+            19.04825555
+          ],
+          [
+            72.83823313279409,
+            19.048608316962728
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "48803916",
+        "name": "Mahim Causeway",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 96.6,
+        "widthM": 16,
+        "waterOverlapM": 64,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.83834697817922,
+            19.04861241611476
+          ],
+          [
+            72.83835305,
+            19.04825965
+          ],
+          [
+            72.83836192419959,
+            19.04774406875535
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "46417988",
+        "name": "Western Express Highway",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 122,
+        "widthM": 18,
+        "waterOverlapM": 112,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84189667869994,
+            19.051160311930367
+          ],
+          [
+            72.8420642660659,
+            19.051224308073675
+          ],
+          [
+            72.84297276599717,
+            19.05157123453476
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "436692573",
+        "name": "Western Railway",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 136.7,
+        "widthM": 10,
+        "waterOverlapM": 114,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84224205549812,
+            19.050110632466545
+          ],
+          [
+            72.84193400000001,
+            19.050850750000002
+          ],
+          [
+            72.84176596972831,
+            19.051254450472797
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "436692571",
+        "name": "Western Railway",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 136.7,
+        "widthM": 10,
+        "waterOverlapM": 114,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84228129999522,
+            19.050123645993228
+          ],
+          [
+            72.84197735000001,
+            19.050865299999998
+          ],
+          [
+            72.84181155909353,
+            19.051269838549146
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "46417986",
+        "name": "Western Express Highway",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 120,
+        "widthM": 18,
+        "waterOverlapM": 110,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84288490575659,
+            19.05154686674856
+          ],
+          [
+            72.8419819832676,
+            19.05118699103568
+          ],
+          [
+            72.84183295722573,
+            19.05112759407336
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "107295478",
+        "name": "Central Railway Harbour Line",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 142.7,
+        "widthM": 10,
+        "waterOverlapM": 128,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84264908969425,
+            19.05023858890314
+          ],
+          [
+            72.8423025,
+            19.050963099999997
+          ],
+          [
+            72.84208981996035,
+            19.051407686354885
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "107295497",
+        "name": "Central Railway Harbour Line",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 142.7,
+        "widthM": 10,
+        "waterOverlapM": 132,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84214158427734,
+            19.05142963731125
+          ],
+          [
+            72.8423478,
+            19.0509823
+          ],
+          [
+            72.84268385525172,
+            19.050253305863148
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "107295495",
+        "name": "Sion–Bandra Link Road",
+        "status": "EXISTING",
+        "geometryMode": "OSM_CHAIN_WATER_CLIP",
+        "lengthM": 736.7,
+        "widthM": 14,
+        "waterOverlapM": 670,
+        "provenance": "OSM_NAMED_ROAD_CHAIN_CLIP"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.85174609465282,
+            19.046848137530983
+          ],
+          [
+            72.8516794,
+            19.0469552
+          ],
+          [
+            72.8514669,
+            19.0472582
+          ],
+          [
+            72.8491451,
+            19.0503333
+          ],
+          [
+            72.8482915,
+            19.0514639
+          ],
+          [
+            72.8477588,
+            19.0521591
+          ],
+          [
+            72.84767457846633,
+            19.05226870336573
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "151938283",
+        "name": "Sion–Bandra Link Road",
+        "status": "EXISTING",
+        "geometryMode": "OSM_CHAIN_WATER_CLIP",
+        "lengthM": 720.2,
+        "widthM": 14,
+        "waterOverlapM": 617.3,
+        "provenance": "OSM_NAMED_ROAD_CHAIN_CLIP"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.84762528596029,
+            19.052527077669872
+          ],
+          [
+            72.8478544,
+            19.0522245
+          ],
+          [
+            72.8483871,
+            19.0515294
+          ],
+          [
+            72.85164127903657,
+            19.047250868744502
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "49037280",
+        "name": "Bandra Kurla Complex Road",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 114.1,
+        "widthM": 12,
+        "waterOverlapM": 80,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.85784855134135,
+            19.060348052052802
+          ],
+          [
+            72.85728040000001,
+            19.06005485
+          ],
+          [
+            72.85689606232792,
+            19.05985650743487
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "1330234680",
+        "name": "BKC Bridge",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 121.9,
+        "widthM": 8,
+        "waterOverlapM": 90,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.85775966031895,
+            19.06040516792059
+          ],
+          [
+            72.85741754900984,
+            19.060410055225002
+          ],
+          [
+            72.85660028310473,
+            19.060421730452216
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "618038082",
+        "name": "BKC Connector",
+        "status": "EXISTING",
+        "geometryMode": "OSM_WATER_CLIP_PLUS_ABUTMENT",
+        "lengthM": 321.1,
+        "widthM": 12,
+        "waterOverlapM": 272,
+        "provenance": "OSM_CLIP_PADDED_ABUTMENT"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.86583642141207,
+            19.05365256362829
+          ],
+          [
+            72.8649328,
+            19.0557468
+          ],
+          [
+            72.8648268,
+            19.0559952
+          ],
+          [
+            72.86471104995546,
+            19.05633581478078
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "746615682",
+        "name": "BKC Connector",
+        "status": "EXISTING",
+        "geometryMode": "OSM_WATER_CLIP_PLUS_ABUTMENT",
+        "lengthM": 317.2,
+        "widthM": 12,
+        "waterOverlapM": 260,
+        "provenance": "OSM_CLIP_PADDED_ABUTMENT"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.86481508069105,
+            19.05634079331586
+          ],
+          [
+            72.8648535,
+            19.0562292
+          ],
+          [
+            72.8649253,
+            19.0560207
+          ],
+          [
+            72.8650263,
+            19.0557835
+          ],
+          [
+            72.86592417940066,
+            19.053688347259055
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "1158399732",
+        "name": "Santa Cruz–Chembur Link Road",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 106,
+        "widthM": 16,
+        "waterOverlapM": 72,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.87231828820805,
+            19.074852532746476
+          ],
+          [
+            72.87168249999999,
+            19.07458805
+          ],
+          [
+            72.87139508889224,
+            19.074468489306387
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "1122421036",
+        "name": "SCLR Flyover",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 116,
+        "widthM": 16,
+        "waterOverlapM": 84,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.87131418923805,
+            19.07463395747475
+          ],
+          [
+            72.87181405902678,
+            19.07485522630951
+          ],
+          [
+            72.8723139288155,
+            19.07507649514427
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "260786314",
+        "name": "Bandra Kurla Complex Road",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 171.8,
+        "widthM": 12,
+        "waterOverlapM": 138,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.87408156744063,
+            19.07086508283042
+          ],
+          [
+            72.87340265,
+            19.07094695
+          ],
+          [
+            72.87245970911025,
+            19.071060654402192
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "260786315",
+        "name": "Bandra Kurla Complex Road",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 169.8,
+        "widthM": 12,
+        "waterOverlapM": 138,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.8724556721928,
+            19.071238982250907
+          ],
+          [
+            72.87341185,
+            19.0710866
+          ],
+          [
+            72.87404930187147,
+            19.07098501183273
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "436370623",
+        "name": "Kalina–Kurla Road",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 132,
+        "widthM": 10,
+        "waterOverlapM": 102,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.8767900634621,
+            19.07853349650035
+          ],
+          [
+            72.8762121,
+            19.0788089
+          ],
+          [
+            72.87566813438862,
+            19.07906810329379
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "osmId": "1509555862",
+        "name": "Kalina–Kurla Road",
+        "status": "EXISTING",
+        "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+        "lengthM": 132,
+        "widthM": 10,
+        "waterOverlapM": 100,
+        "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            72.87570770690267,
+            19.07911935858415
+          ],
+          [
+            72.8762359,
+            19.078870600000002
+          ],
+          [
+            72.87683224704536,
+            19.078589743534028
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+# Mithi River — local Postgres + history API
+# Usage:
+#   npm run db:up          # Postgres only
+#   npm run stack:up       # Postgres + history API
+#   npm run stack:down
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: mithi_postgres
+    environment:
+      POSTGRES_USER: mithi
+      POSTGRES_PASSWORD: mithi
+      POSTGRES_DB: mithi_river
+    ports:
+      # Host 5433 — avoids Windows local PostgreSQL which already owns 5432
+      - "5433:5432"
+    volumes:
+      - mithi_pg_data:/var/lib/postgresql/data
+      - ./server/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mithi -d mithi_river"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  history-api:
+    image: node:20-alpine
+    container_name: mithi_history_api
+    working_dir: /app
+    volumes:
+      - ./server:/app
+    command: sh -c "npm install --omit=dev && node index.js"
+    environment:
+      DATABASE_URL: postgresql://mithi:mithi@postgres:5432/mithi_river
+      MITHI_PROJECT_ID: mithi
+      HISTORY_API_PORT: "5181"
+      PG_POOL_MAX: "10"
+      HISTORY_REQUEST_TIMEOUT_MS: "25000"
+      NODE_ENV: production
+    ports:
+      - "5181:5181"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:5181/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 20s
+
+volumes:
+  mithi_pg_data:

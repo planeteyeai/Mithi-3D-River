@@ -1,0 +1,1091 @@
+{
+  "river": "Mithi",
+  "note": "Geographically verified OSM bridges with documented digitized bank landings where OSM stubs / offsets leave incomplete decks. Unverified structures remain hidden.",
+  "bridges": [
+    {
+      "id": "46417981",
+      "osmId": "46417981",
+      "name": "Mahim Causeway",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 16,
+      "lengthM": 88.5,
+      "sourceWayLengthM": 59,
+      "waterOverlapM": 56,
+      "status": "EXISTING",
+      "verificationNote": "Historic causeway over Mithi; BMC arch rebuild underway beside existing deck",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.048210323466208,
+        "lon": 72.83823992143667
+      },
+      "coords": [
+        [
+          72.83824671007925,
+          19.047812329969908
+        ],
+        [
+          72.83823915,
+          19.04825555
+        ],
+        [
+          72.83823313279409,
+          19.048608316962728
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8382437,
+          19.0479888
+        ],
+        [
+          72.8382346,
+          19.0485223
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "BMC: existing deck ~44.1–46 m waterway / ~46–59 m structure; dual west carriageway; abutments to SV Road approaches"
+    },
+    {
+      "id": "48803916",
+      "osmId": "48803916",
+      "name": "Mahim Causeway",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 16,
+      "lengthM": 96.6,
+      "sourceWayLengthM": 58.5,
+      "waterOverlapM": 64,
+      "status": "EXISTING",
+      "verificationNote": "Dual carriageway of Mahim Causeway",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.048178242434933,
+        "lon": 72.8383544511894
+      },
+      "coords": [
+        [
+          72.83834697817922,
+          19.04861241611476
+        ],
+        [
+          72.83835305,
+          19.04825965
+        ],
+        [
+          72.83836192419959,
+          19.04774406875535
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8383485,
+          19.048524
+        ],
+        [
+          72.8383576,
+          19.0479953
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Dual east carriageway of Mahim Causeway; satellite dual deck"
+    },
+    {
+      "id": "46417988",
+      "osmId": "46417988",
+      "name": "Western Express Highway",
+      "bridgeType": "girder",
+      "highway": "motorway",
+      "railway": null,
+      "widthM": 18,
+      "lengthM": 122,
+      "sourceWayLengthM": 79.7,
+      "waterOverlapM": 112,
+      "status": "EXISTING",
+      "verificationNote": "WEH dual carriageway over Mithi near Mahim",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.051365773198498,
+        "lon": 72.84243472225936
+      },
+      "coords": [
+        [
+          72.84189667869994,
+          19.051160311930367
+        ],
+        [
+          72.8420642660659,
+          19.051224308073675
+        ],
+        [
+          72.84297276599717,
+          19.05157123453476
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8415419,
+          19.0513722
+        ],
+        [
+          72.8422445,
+          19.0516405
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "WEH carriageway over Mithi at Mahim; OSM way sits beside channel (waterOverlap 0) — digitize along OSM heading through nearest water to abutments"
+    },
+    {
+      "id": "436692573",
+      "osmId": "436692573",
+      "name": "Western Railway",
+      "bridgeType": "railway",
+      "highway": "railway",
+      "railway": "rail",
+      "widthM": 10,
+      "lengthM": 136.7,
+      "sourceWayLengthM": 65.1,
+      "waterOverlapM": 114,
+      "status": "EXISTING",
+      "verificationNote": "WR parallel track bridge over Mithi",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.050682541376414,
+        "lon": 72.84200401265203
+      },
+      "coords": [
+        [
+          72.84224205549812,
+          19.050110632466545
+        ],
+        [
+          72.84193400000001,
+          19.050850750000002
+        ],
+        [
+          72.84176596972831,
+          19.051254450472797
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8420479,
+          19.0505771
+        ],
+        [
+          72.8418201,
+          19.0511244
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "WR parallel track; satellite multi-track corridor"
+    },
+    {
+      "id": "436692571",
+      "osmId": "436692571",
+      "name": "Western Railway",
+      "bridgeType": "railway",
+      "highway": "railway",
+      "railway": "rail",
+      "widthM": 10,
+      "lengthM": 136.7,
+      "sourceWayLengthM": 65.9,
+      "waterOverlapM": 114,
+      "status": "EXISTING",
+      "verificationNote": "WR parallel track bridge over Mithi",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.050696742180026,
+        "lon": 72.84204642958173
+      },
+      "coords": [
+        [
+          72.84228129999522,
+          19.050123645993228
+        ],
+        [
+          72.84197735000001,
+          19.050865299999998
+        ],
+        [
+          72.84181155909353,
+          19.051269838549146
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8420912,
+          19.0505875
+        ],
+        [
+          72.8418635,
+          19.0511431
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "WR Bridge No.20 Mahim–Bandra; published span ~50–60 m; abutments beyond water"
+    },
+    {
+      "id": "46417986",
+      "osmId": "46417986",
+      "name": "Western Express Highway",
+      "bridgeType": "girder",
+      "highway": "motorway",
+      "railway": null,
+      "widthM": 18,
+      "lengthM": 120,
+      "sourceWayLengthM": 78,
+      "waterOverlapM": 110,
+      "status": "EXISTING",
+      "verificationNote": "WEH carriageway bridge over Mithi near Mahim",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.0513372303791,
+        "lon": 72.84235893141123
+      },
+      "coords": [
+        [
+          72.84288490575659,
+          19.05154686674856
+        ],
+        [
+          72.8419819832676,
+          19.05118699103568
+        ],
+        [
+          72.84183295722573,
+          19.05112759407336
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8423536,
+          19.0514282
+        ],
+        [
+          72.8416694,
+          19.0511555
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "WEH dual carriageway over Mithi at Mahim; parallel to 46417988"
+    },
+    {
+      "id": "107295478",
+      "osmId": "107295478",
+      "name": "Central Railway Harbour Line",
+      "bridgeType": "railway",
+      "highway": "railway",
+      "railway": "rail",
+      "widthM": 10,
+      "lengthM": 142.7,
+      "sourceWayLengthM": 63.5,
+      "waterOverlapM": 128,
+      "status": "EXISTING",
+      "verificationNote": "Harbour Line parallel span",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.05082313749607,
+        "lon": 72.8423694548909
+      },
+      "coords": [
+        [
+          72.84264908969425,
+          19.05023858890314
+        ],
+        [
+          72.8423025,
+          19.050963099999997
+        ],
+        [
+          72.84208981996035,
+          19.051407686354885
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8424275,
+          19.0507018
+        ],
+        [
+          72.8421775,
+          19.0512244
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Harbour Line parallel span"
+    },
+    {
+      "id": "107295497",
+      "osmId": "107295497",
+      "name": "Central Railway Harbour Line",
+      "bridgeType": "railway",
+      "highway": "railway",
+      "railway": "rail",
+      "widthM": 10,
+      "lengthM": 142.7,
+      "sourceWayLengthM": 63.7,
+      "waterOverlapM": 132,
+      "status": "EXISTING",
+      "verificationNote": "Harbour Line bridge over Mithi near Mahim/Bandra",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.050841471460682,
+        "lon": 72.84241271982286
+      },
+      "coords": [
+        [
+          72.84214158427734,
+          19.05142963731125
+        ],
+        [
+          72.8423478,
+          19.0509823
+        ],
+        [
+          72.84268385525172,
+          19.050253305863148
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8422261,
+          19.0512463
+        ],
+        [
+          72.8424695,
+          19.0507183
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Harbour Line bridge over Mithi; abutments to approach embankments"
+    },
+    {
+      "id": "107295495",
+      "osmId": "107295495",
+      "name": "Sion–Bandra Link Road",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 14,
+      "lengthM": 736.7,
+      "sourceWayLengthM": 95.1,
+      "waterOverlapM": 670,
+      "status": "EXISTING",
+      "verificationNote": "Sion–Bandra Link Road — continuous OSM chain across channel to both banks",
+      "geometryMode": "OSM_CHAIN_WATER_CLIP",
+      "midpoint": {
+        "lat": 19.049567084315395,
+        "lon": 72.84972361763407
+      },
+      "coords": [
+        [
+          72.85174609465282,
+          19.046848137530983
+        ],
+        [
+          72.8516794,
+          19.0469552
+        ],
+        [
+          72.8514669,
+          19.0472582
+        ],
+        [
+          72.8491451,
+          19.0503333
+        ],
+        [
+          72.8482915,
+          19.0514639
+        ],
+        [
+          72.8477588,
+          19.0521591
+        ],
+        [
+          72.84767457846633,
+          19.05226870336573
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8482915,
+          19.0514639
+        ],
+        [
+          72.8477588,
+          19.0521591
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "OSM_NAMED_ROAD_CHAIN_CLIP",
+      "digitizationEvidence": "Stitched OSM Sion Bandra Link Road ways 22859121→107295495→1154760961→151938285; water-clip of original OSM vertices to dry abutments (not invented coords). Short bridge=yes stub alone did not reach opposite bank."
+    },
+    {
+      "id": "151938283",
+      "osmId": "151938283",
+      "name": "Sion–Bandra Link Road",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 14,
+      "lengthM": 720.2,
+      "sourceWayLengthM": 95.1,
+      "waterOverlapM": 617.3,
+      "status": "EXISTING",
+      "verificationNote": "Sion–Bandra Link Road — continuous OSM chain across channel to both banks",
+      "geometryMode": "OSM_CHAIN_WATER_CLIP",
+      "midpoint": {
+        "lat": 19.049889650667748,
+        "lon": 72.84963426581079
+      },
+      "coords": [
+        [
+          72.84762528596029,
+          19.052527077669872
+        ],
+        [
+          72.8478544,
+          19.0522245
+        ],
+        [
+          72.8483871,
+          19.0515294
+        ],
+        [
+          72.85164127903657,
+          19.047250868744502
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8478544,
+          19.0522245
+        ],
+        [
+          72.8483871,
+          19.0515294
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "OSM_NAMED_ROAD_CHAIN_CLIP",
+      "digitizationEvidence": "Dual carriageway stitch OSM 1235767980→151938283→1251127689→1253603265; water-clip of original OSM vertices to dry abutments."
+    },
+    {
+      "id": "49037280",
+      "osmId": "49037280",
+      "name": "Bandra Kurla Complex Road",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 12,
+      "lengthM": 114.1,
+      "sourceWayLengthM": 99.8,
+      "waterOverlapM": 80,
+      "status": "EXISTING",
+      "verificationNote": "BKC Road western dual carriageway",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.060102279630613,
+        "lon": 72.85737230661523
+      },
+      "coords": [
+        [
+          72.85784855134135,
+          19.060348052052802
+        ],
+        [
+          72.85728040000001,
+          19.06005485
+        ],
+        [
+          72.85689606232792,
+          19.05985650743487
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8576975,
+          19.0602701
+        ],
+        [
+          72.8568633,
+          19.0598396
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=108m (not AOI stretch)"
+    },
+    {
+      "id": "1330234680",
+      "osmId": "1330234680",
+      "name": "BKC Bridge",
+      "bridgeType": "girder",
+      "highway": "road",
+      "railway": null,
+      "widthM": 8,
+      "lengthM": 121.9,
+      "sourceWayLengthM": 228.9,
+      "waterOverlapM": 90,
+      "status": "EXISTING",
+      "verificationNote": "Mapped BKC Bridge OSM way over Mithi | Opened closed OSM footprint to longest chord",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.060413449186278,
+        "lon": 72.85717997172037
+      },
+      "coords": [
+        [
+          72.85775966031895,
+          19.06040516792059
+        ],
+        [
+          72.85741754900984,
+          19.060410055225002
+        ],
+        [
+          72.85660028310473,
+          19.060421730452216
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.857101,
+          19.0598084
+        ],
+        [
+          72.8576227,
+          19.0600847
+        ],
+        [
+          72.8574926,
+          19.0604498
+        ],
+        [
+          72.8568247,
+          19.0600961
+        ],
+        [
+          72.857101,
+          19.0598084
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=148m (not AOI stretch)"
+    },
+    {
+      "id": "618038082",
+      "osmId": "618038082",
+      "name": "BKC Connector",
+      "bridgeType": "girder",
+      "highway": "secondary",
+      "railway": null,
+      "widthM": 12,
+      "lengthM": 321.1,
+      "sourceWayLengthM": 1437.7,
+      "waterOverlapM": 272,
+      "status": "EXISTING",
+      "verificationNote": "BKC Connector elevated way — water-crossing OSM segment only",
+      "geometryMode": "OSM_WATER_CLIP_PLUS_ABUTMENT",
+      "midpoint": {
+        "lat": 19.054989319575007,
+        "lon": 72.86525963776316
+      },
+      "coords": [
+        [
+          72.86583642141207,
+          19.05365256362829
+        ],
+        [
+          72.8649328,
+          19.0557468
+        ],
+        [
+          72.8648268,
+          19.0559952
+        ],
+        [
+          72.86471104995546,
+          19.05633581478078
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8734572,
+          19.050191
+        ],
+        [
+          72.8717824,
+          19.0495818
+        ],
+        [
+          72.8715481,
+          19.0495398
+        ],
+        [
+          72.8713198,
+          19.0495437
+        ],
+        [
+          72.8711304,
+          19.0496123
+        ],
+        [
+          72.870957,
+          19.0496986
+        ],
+        [
+          72.8667582,
+          19.0527588
+        ],
+        [
+          72.8663224,
+          19.0531266
+        ],
+        [
+          72.8661613,
+          19.0532508
+        ],
+        [
+          72.8659741,
+          19.0534487
+        ],
+        [
+          72.8658292,
+          19.0536693
+        ],
+        [
+          72.8649328,
+          19.0557468
+        ],
+        [
+          72.8648268,
+          19.0559952
+        ],
+        [
+          72.8647169,
+          19.0563186
+        ],
+        [
+          72.8646692,
+          19.0565593
+        ],
+        [
+          72.8645763,
+          19.0576205
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "OSM_CLIP_PADDED_ABUTMENT",
+      "digitizationEvidence": "Keep OSM water-clip — already spans channel (~269 m); pad abutments only if ends wet"
+    },
+    {
+      "id": "746615682",
+      "osmId": "746615682",
+      "name": "BKC Connector",
+      "bridgeType": "girder",
+      "highway": "secondary",
+      "railway": null,
+      "widthM": 12,
+      "lengthM": 317.2,
+      "sourceWayLengthM": 1421.1,
+      "waterOverlapM": 260,
+      "status": "EXISTING",
+      "verificationNote": "BKC Connector dual — water-crossing OSM segment only",
+      "geometryMode": "OSM_WATER_CLIP_PLUS_ABUTMENT",
+      "midpoint": {
+        "lat": 19.0550104142849,
+        "lon": 72.8653576065081
+      },
+      "coords": [
+        [
+          72.86481508069105,
+          19.05634079331586
+        ],
+        [
+          72.8648535,
+          19.0562292
+        ],
+        [
+          72.8649253,
+          19.0560207
+        ],
+        [
+          72.8650263,
+          19.0557835
+        ],
+        [
+          72.86592417940066,
+          19.053688347259055
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8646716,
+          19.057634
+        ],
+        [
+          72.8647761,
+          19.0565793
+        ],
+        [
+          72.864821,
+          19.0563236
+        ],
+        [
+          72.8648535,
+          19.0562292
+        ],
+        [
+          72.8649253,
+          19.0560207
+        ],
+        [
+          72.8650263,
+          19.0557835
+        ],
+        [
+          72.865917,
+          19.0537051
+        ],
+        [
+          72.8660409,
+          19.0535069
+        ],
+        [
+          72.86623,
+          19.0532965
+        ],
+        [
+          72.8663372,
+          19.0532081
+        ],
+        [
+          72.8668068,
+          19.052821
+        ],
+        [
+          72.8710041,
+          19.0497683
+        ],
+        [
+          72.8711625,
+          19.0496861
+        ],
+        [
+          72.871337,
+          19.0496217
+        ],
+        [
+          72.8715388,
+          19.049619
+        ],
+        [
+          72.8717528,
+          19.0496536
+        ],
+        [
+          72.8734277,
+          19.0502644
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "OSM_CLIP_PADDED_ABUTMENT",
+      "digitizationEvidence": "Keep OSM water-clip — dual BKC Connector"
+    },
+    {
+      "id": "1158399732",
+      "osmId": "1158399732",
+      "name": "Santa Cruz–Chembur Link Road",
+      "bridgeType": "girder",
+      "highway": "trunk",
+      "railway": null,
+      "widthM": 16,
+      "lengthM": 106,
+      "sourceWayLengthM": 56.7,
+      "waterOverlapM": 72,
+      "status": "EXISTING",
+      "verificationNote": "SCLR trunk bridge over Mithi",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.074660510968396,
+        "lon": 72.87185668841065
+      },
+      "coords": [
+        [
+          72.87231828820805,
+          19.074852532746476
+        ],
+        [
+          72.87168249999999,
+          19.07458805
+        ],
+        [
+          72.87139508889224,
+          19.074468489306387
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8719295,
+          19.0746908
+        ],
+        [
+          72.8714355,
+          19.0744853
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=73m (not AOI stretch)"
+    },
+    {
+      "id": "1122421036",
+      "osmId": "1122421036",
+      "name": "SCLR Flyover",
+      "bridgeType": "girder",
+      "highway": "trunk",
+      "railway": null,
+      "widthM": 16,
+      "lengthM": 116,
+      "sourceWayLengthM": 742,
+      "waterOverlapM": 84,
+      "status": "EXISTING",
+      "verificationNote": "SCLR flyover span over Mithi (water-crossing segment of OSM way)",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.074855226188348,
+        "lon": 72.87181405875306
+      },
+      "coords": [
+        [
+          72.87131418923805,
+          19.07463395747475
+        ],
+        [
+          72.87181405902678,
+          19.07485522630951
+        ],
+        [
+          72.8723139288155,
+          19.07507649514427
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8664424,
+          19.0725062
+        ],
+        [
+          72.8723164,
+          19.0750749
+        ],
+        [
+          72.8728368,
+          19.0753367
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=88m (not AOI stretch)"
+    },
+    {
+      "id": "260786314",
+      "osmId": "260786314",
+      "name": "Bandra Kurla Complex Road",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 12,
+      "lengthM": 171.8,
+      "sourceWayLengthM": 120.4,
+      "waterOverlapM": 138,
+      "status": "EXISTING",
+      "verificationNote": "BKC Road eastern Mithi crossing",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.07096286859254,
+        "lon": 72.87327063847252
+      },
+      "coords": [
+        [
+          72.87408156744063,
+          19.07086508283042
+        ],
+        [
+          72.87340265,
+          19.07094695
+        ],
+        [
+          72.87245970911025,
+          19.071060654402192
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8739703,
+          19.0708785
+        ],
+        [
+          72.872835,
+          19.0710154
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=108m (not AOI stretch)"
+    },
+    {
+      "id": "260786315",
+      "osmId": "260786315",
+      "name": "Bandra Kurla Complex Road",
+      "bridgeType": "girder",
+      "highway": "primary",
+      "railway": null,
+      "widthM": 12,
+      "lengthM": 169.8,
+      "sourceWayLengthM": 122.5,
+      "waterOverlapM": 138,
+      "status": "EXISTING",
+      "verificationNote": "BKC Road eastern dual carriageway",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.071111997003975,
+        "lon": 72.8732524872696
+      },
+      "coords": [
+        [
+          72.8724556721928,
+          19.071238982250907
+        ],
+        [
+          72.87341185,
+          19.0710866
+        ],
+        [
+          72.87404930187147,
+          19.07098501183273
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8728377,
+          19.0711781
+        ],
+        [
+          72.873986,
+          19.0709951
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=108m (not AOI stretch)"
+    },
+    {
+      "id": "436370623",
+      "osmId": "436370623",
+      "name": "Kalina–Kurla Road",
+      "bridgeType": "girder",
+      "highway": "secondary",
+      "railway": null,
+      "widthM": 10,
+      "lengthM": 132,
+      "sourceWayLengthM": 95.7,
+      "waterOverlapM": 102,
+      "status": "EXISTING",
+      "verificationNote": "Kalina–Kurla Road over Mithi",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.078800799730335,
+        "lon": 72.87622909927526
+      },
+      "coords": [
+        [
+          72.8767900634621,
+          19.07853349650035
+        ],
+        [
+          72.8762121,
+          19.0788089
+        ],
+        [
+          72.87566813438862,
+          19.07906810329379
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8766186,
+          19.0786152
+        ],
+        [
+          72.8758056,
+          19.0790026
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=88m (not AOI stretch)"
+    },
+    {
+      "id": "1509555862",
+      "osmId": "1509555862",
+      "name": "Kalina–Kurla Road",
+      "bridgeType": "girder",
+      "highway": "secondary",
+      "railway": null,
+      "widthM": 10,
+      "lengthM": 132,
+      "sourceWayLengthM": 96.2,
+      "waterOverlapM": 100,
+      "status": "EXISTING",
+      "verificationNote": "Kalina–Kurla dual carriageway",
+      "geometryMode": "MANUAL_DIGITIZED_SATELLITE",
+      "midpoint": {
+        "lat": 19.07885455089982,
+        "lon": 72.87626997731219
+      },
+      "coords": [
+        [
+          72.87570770690267,
+          19.07911935858415
+        ],
+        [
+          72.8762359,
+          19.078870600000002
+        ],
+        [
+          72.87683224704536,
+          19.078589743534028
+        ]
+      ],
+      "sourceCoords": [
+        [
+          72.8758261,
+          19.0790636
+        ],
+        [
+          72.8766457,
+          19.0786776
+        ]
+      ],
+      "source": "MITHI_OSM",
+      "provenance": "DIGITIZED_OSM_HEADING_BANK_LANDING",
+      "digitizationEvidence": "Completed along OSM heading through water anchor; halfCap=88m (not AOI stretch)"
+    }
+  ],
+  "digitizedAt": "2026-11-12T09:59:09.616Z"
+}

@@ -1,0 +1,49 @@
+{
+  "source": "src/data/vegetation_health (1).kml",
+  "bounds": {
+    "north": 19.10610744,
+    "south": 19.02674113,
+    "east": 72.89905415,
+    "west": 72.81483231
+  },
+  "classes": [
+    {
+      "id": "very_healthy",
+      "label": "Very Healthy (80-100)",
+      "color": "#006400",
+      "min": 80,
+      "max": 100
+    },
+    {
+      "id": "healthy",
+      "label": "Healthy (65-80)",
+      "color": "#32CD32",
+      "min": 65,
+      "max": 80
+    },
+    {
+      "id": "moderate",
+      "label": "Moderate (50-65)",
+      "color": "#FFFF00",
+      "min": 50,
+      "max": 65
+    },
+    {
+      "id": "poor",
+      "label": "Poor (35-50)",
+      "color": "#FF8C00",
+      "min": 35,
+      "max": 50
+    },
+    {
+      "id": "critical",
+      "label": "Critical (0-35)",
+      "color": "#FF0000",
+      "min": 0,
+      "max": 35
+    }
+  ],
+  "formula": "50% NDVI · 30% NDMI · 20% EVI",
+  "mean_health_score": 68.4,
+  "vegetation_area_ha": 515.66
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Mithi River Water (MNDWI)</name>
+    <description>Sentinel-2 MNDWI live water (blue). Frequency threshold: 0.5. Window: 2026-10-13 to 2026-11-12. Water area: 72.48201756266876 ha.</description>
+    <GroundOverlay>
+      <name>Mithi River Water (MNDWI)</name>
+      <color>ccffffff</color>
+      <Icon><href>water_depth_mndwi_overlay.png</href></Icon>
+      <LatLonBox>
+        <north>19.08782672</north>
+        <south>19.04514933</south>
+        <east>72.87929619</east>
+        <west>72.83456075</west>
+        <rotation>0</rotation>
+      </LatLonBox>
+    </GroundOverlay>
+  </Document>
+</kml>
