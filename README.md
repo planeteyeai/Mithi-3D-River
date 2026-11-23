@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/river-eye-logo.png" alt="RiverEye" width="120" />
+  <img src="docs/images/river-eye-logo.webp" alt="RiverEye Mountain River" width="220" />
 </p>
 
 # Mithi River 3D Digital Twin
