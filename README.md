@@ -162,15 +162,42 @@ Schema: `server/schema.sql` → table `component_history` (auto-applied on boot)
 
 ---
 
+## Backend mode (local first)
+
+**Right now we use the local backend only** (no hosted history API URL yet).
+
+```bash
+npm run db:up          # Postgres :5433
+npm run dev:server     # Express  :5181
+npm run history:health # {"ok":true,"db":true}
+npm run dev            # SPA      :5180  (proxies /api/history → :5181)
+```
+
+Env: copy `.env.example` → `.env` and `server/.env.example` → `server/.env`.  
+Defaults already point at `postgresql://mithi:mithi@127.0.0.1:5433/mithi_river`.
+
+### When you get a hosted API later
+
+1. Set `DATABASE_URL` on the host (Render/Neon) and deploy `server/` (`render.yaml`).
+2. Set `HISTORY_API_PUBLIC_URL=https://YOUR-SERVICE…` in the deploy env.
+3. Add these rewrites to `vercel.json` (above the SPA catch-all) and redeploy:
+
+```json
+{ "source": "/api/health", "destination": "https://YOUR-SERVICE/api/health" },
+{ "source": "/api/history/:path*", "destination": "https://YOUR-SERVICE/api/history/:path*" }
+```
+
+Until then: **Vercel = frontend only**; history/cache needs local `db:up` + `dev:server`.
+
 ## Production notes
 
-Recommended split hosting:
+Recommended split (after a hosted URL exists):
 
 1. **Frontend** → Vercel (Vite SPA + `vercel.json` proxies)
 2. **History API** → Render Web Service (`server/`)
 3. **Database** → Render Postgres / Neon (`DATABASE_URL`)
 
-See `.verify/DEPLOYMENT_AUDIT_REPORT.md` (local) / `render.yaml` for a Render blueprint.
+See `render.yaml` for a Render blueprint.
 
 ---
 
