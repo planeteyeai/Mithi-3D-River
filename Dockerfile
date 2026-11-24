@@ -14,6 +14,10 @@ RUN npm --prefix server ci --ignore-scripts
 # Source + build frontend (Vite inlines VITE_* at build time)
 COPY . .
 
+# Pull Git LFS assets when available (safe no-op if LFS missing in the build context)
+RUN apk add --no-cache git git-lfs \
+ && (git lfs install && git lfs pull) || echo "[build] git lfs skipped"
+
 ARG VITE_HISTORY_API_BASE=/api/history
 ARG VITE_JALNETRA_API_BASE=/jalnetra-api
 ARG VITE_RIVEREYE_API=/rivereye-api
@@ -40,10 +44,12 @@ RUN apk add --no-cache curl
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/server ./server
 
+# DATABASE_URL / PGSSLMODE come from Render Environment at runtime (never bake secrets).
 ENV NODE_ENV=production \
     HOST=0.0.0.0 \
     SERVE_SPA=1 \
-    MITHI_PROJECT_ID=mithi
+    MITHI_PROJECT_ID=mithi \
+    PGSSLMODE=require
 
 WORKDIR /app/server
 

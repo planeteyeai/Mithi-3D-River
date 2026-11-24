@@ -30,6 +30,8 @@ services:
         value: "1"
       - key: MITHI_PROJECT_ID
         value: mithi
+      # Prefer linking the existing Render DB in the dashboard if this
+      # blueprint DB name differs. Override DATABASE_URL manually when needed.
       - key: DATABASE_URL
         fromDatabase:
           name: mithi-river-db

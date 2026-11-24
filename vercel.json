@@ -1,8 +1,16 @@
 {
-  "buildCommand": "git lfs install --local && git lfs pull && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
+    {
+      "source": "/api/health",
+      "destination": "https://mithi-3d-river.onrender.com/api/health"
+    },
+    {
+      "source": "/api/history/:path*",
+      "destination": "https://mithi-3d-river.onrender.com/api/history/:path*"
+    },
     {
       "source": "/jalnetra-api/api/:path*",
       "destination": "https://jalnetra-software-production.up.railway.app/api/:path*"
