@@ -39,23 +39,27 @@ app.use((req, res, next) => {
 });
 
 app.get("/api/health", async (_req, res) => {
+  // Always 200 when the process is up so Render Docker healthchecks stay green
+  // even if Postgres is still linking / waking.
+  let db = false;
+  let dbError = null;
   try {
-    const ok = await healthCheck();
-    const poolStats = {
+    db = !!(await healthCheck());
+  } catch (err) {
+    dbError = err.message;
+  }
+  res.json({
+    ok: true,
+    service: "mithi-river",
+    db,
+    dbError,
+    pool: {
       total: pool.totalCount,
       idle: pool.idleCount,
       waiting: pool.waitingCount,
-    };
-    res.json({
-      ok,
-      service: "mithi-river",
-      db: !!ok,
-      pool: poolStats,
-      spa: process.env.SERVE_SPA !== "0",
-    });
-  } catch (err) {
-    res.status(503).json({ ok: false, error: err.message });
-  }
+    },
+    spa: process.env.SERVE_SPA !== "0",
+  });
 });
 
 app.use("/api/history", historyRouter);
@@ -66,7 +70,12 @@ const spaOn = process.env.SERVE_SPA !== "0";
 if (spaOn) mountSpa(app);
 
 async function main() {
-  await ensureSchema();
+  try {
+    await ensureSchema();
+  } catch (err) {
+    // SPA + proxies still boot; history endpoints fail until DB is reachable.
+    console.warn("[mithi] DB schema deferred:", err.message);
+  }
   app.listen(PORT, HOST, () => {
     console.info(`[mithi] listening on http://${HOST}:${PORT}`);
   });

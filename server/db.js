@@ -10,12 +10,19 @@ const connectionString =
   process.env.DATABASE_URL ||
   "postgresql://mithi:mithi@127.0.0.1:5433/mithi_river";
 
+/** Render / managed Postgres usually require TLS. */
+const needsSsl =
+  /sslmode=require/i.test(connectionString) ||
+  /\.render\.com/i.test(connectionString) ||
+  process.env.PGSSLMODE === "require";
+
 export const pool = new Pool({
   connectionString,
   max: Number(process.env.PG_POOL_MAX) || 10,
   idleTimeoutMillis: 30_000,
   connectionTimeoutMillis: 8_000,
   allowExitOnIdle: true,
+  ...(needsSsl ? { ssl: { rejectUnauthorized: false } } : {}),
 });
 
 pool.on("error", (err) => {

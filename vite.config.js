@@ -117,13 +117,13 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Vendor-only splits. Do NOT split src/eye/* — urban ↔ services
+          // circular imports cause TDZ: "Cannot access 'X' before initialization".
           if (id.includes("node_modules/three")) return "vendor-three";
           if (id.includes("node_modules/geotiff")) return "vendor-geotiff";
           if (id.includes("node_modules/proj4")) return "vendor-proj4";
           if (id.includes("node_modules/chart.js")) return "vendor-chart";
           if (id.includes("node_modules/lucide")) return "vendor-lucide";
-          if (id.includes("/src/eye/urban/")) return "eye-urban";
-          if (id.includes("/src/eye/services/")) return "eye-services";
         },
         assetFileNames: (assetInfo) => {
           const ext = assetInfo.name.split('.').pop();
