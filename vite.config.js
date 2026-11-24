@@ -72,8 +72,8 @@ export default defineConfig({
         changeOrigin: true,
         secure: true,
         timeout: 30000,
-        rewrite: (path) =>
-          path.replace(/^\/jalnetra-api/, "/api"),
+        // Client uses /jalnetra-api + /api/... → strip only the proxy prefix.
+        rewrite: (path) => path.replace(/^\/jalnetra-api/, ""),
         configure: createProxyErrorHandler("jalnetra-api"),
       },
 

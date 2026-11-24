@@ -1115,6 +1115,8 @@ export function mountAnalyticsControls(root, dataset) {
   el.addEventListener("click", async (event) => {
     const button = event.target.closest("[data-analytics]");
     if (!button) return;
+    // 2D map owns River Data analyses — block 3D analytics toolbar there.
+    if (isMap2dMode()) return;
     document.dispatchEvent(new CustomEvent("river-measure-clear"));
     const type = button.dataset.analytics;
 
@@ -1161,7 +1163,7 @@ export function mountAnalyticsControls(root, dataset) {
       closeAll();
       window.__MM_SCENE__?.hideHydrology?.();
       clearHydroLegend();
-      document.querySelector("#nav-overview")?.click();
+      // Stay at the user's current camera — do not jump to overview / 0+000.
       setActive(null);
       return;
     }
@@ -1519,7 +1521,33 @@ export function mountAnalyticsControls(root, dataset) {
     });
   }
 
-  return el;
+  function isMap2dMode() {
+    const m = state.cameraMode;
+    return m === "aerial" || m === "top" || m === "2d";
+  }
+
+  /** 2D = River Data analyses only; 3D = Geology / WQ / Pollution / Land Use / Climate. */
+  function syncViewMode() {
+    const map2d = isMap2dMode();
+    el.hidden = map2d;
+    el.setAttribute("aria-hidden", map2d ? "true" : "false");
+    el.classList.toggle("is-map-2d-hidden", map2d);
+    if (map2d) {
+      closeAll();
+    }
+  }
+
+  document.addEventListener("view-mode-change", syncViewMode);
+  syncViewMode();
+
+  return {
+    el,
+    closeAll,
+    syncViewMode,
+    dispose() {
+      document.removeEventListener("view-mode-change", syncViewMode);
+    },
+  };
 }
 
 /** Hydrograph, simulation state, and flood alerts from the live river APIs. */

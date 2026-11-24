@@ -715,8 +715,7 @@ export function mountGeologyWorkspace(root) {
         // No status text beside the geology icons.
         setGeoStatus("");
         if (count >= 1) {
-          // Keep overview of all Upstream 01–05 (activate already framed them).
-          window.__MM_SCENE__?.overviewJoiningStreams?.();
+          // Stay at the user's current camera — Next/Prev still focus individual streams.
         } else if (wqCount > 0) {
           // Tip-connect failed — still list all given Upstream BOD/COD rows.
           const first = wqStreams[0];

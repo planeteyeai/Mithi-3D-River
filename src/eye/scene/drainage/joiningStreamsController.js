@@ -622,21 +622,19 @@ export function createJoiningStreamsController({ dataset, nallaFlow, cam, system
     active = true;
     refreshRecords();
     const list = getRecords();
-    // Select first Upstream (or nearest) for the card, but camera shows ALL streams.
+    // Prefer nearest stream to the current view — do not jump to first/last or overview.
     const nearIdx = nearestIndexToView();
-    const sel = list[0] || (nearIdx >= 0 ? list[nearIdx] : null) || null;
+    const sel = (nearIdx >= 0 ? list[nearIdx] : null) || list[0] || null;
     if (sel) {
-      selectedIndex = 0;
+      selectedIndex = Math.max(0, list.indexOf(sel));
       select(sel, {
         source: "activate",
-        syncChainage: true,
+        syncChainage: false,
         focusCamera: false,
       });
     }
     window.__MM_JOINING_NAV__?.setVisible?.(true);
     window.__MM_JOINING_NAV__?.update?.(getSelected(), getRecords());
-    // Frame every joining stream (Upstream 01–05) — do not zoom into only one.
-    overviewAllJoiningStreams();
   }
 
   function deactivate() {

@@ -2422,6 +2422,15 @@
 #ui-root.gis-ui .gis-brand-mark b { display:block; margin-top:3px; color:#8bd3e4; font-size:12px; letter-spacing:.13em; font-weight:600; }
 #ui-root.gis-ui .gis-brand p { font-size: 14px; }
 #ui-root.gis-ui .gis-brand small { font-size: 12px; }
+/* 2D map: hide 3D analytics toolbar (Geology / WQ / Pollution / Land Use / Climate). */
+#ui-root.gis-ui.is-map-2d .analytics-controls,
+#ui-root.gis-ui.is-map-2d .analytics-controls--glass {
+  display: none !important;
+}
+.analytics-controls.is-map-2d-hidden {
+  display: none !important;
+}
+
 .analytics-controls,
 .top-navigation {
   position: fixed;

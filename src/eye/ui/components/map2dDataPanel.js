@@ -108,6 +108,8 @@ export function mountMap2dDataPanel(stack, riverData) {
 
   async function select(opt) {
     if (busy) return;
+    // 2D analyses only — never open these layers while in 3D.
+    if (!isMap2d()) return;
     busy = true;
     setRowStatus(null);
     if (state.active2DAnalysis === "silt") window.__MM_SCENE__?.setSiltAnalysisActive?.(false);

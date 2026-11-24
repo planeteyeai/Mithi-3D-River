@@ -12,12 +12,14 @@ import { getRiverSession } from "./riverSession.js";
 import {
   storeComponentHistory,
   getLatestComponentHistory,
+  ensureTodayHistory,
 } from "../../api/historyClient.js";
 import { hydrateLocalSnapshotsIntoSession } from "./localJalnetraSnapshots.js";
 
+/** Same-origin proxy (/jalnetra-api) — works on Vite + Vercel without CORS. */
 export const API_BASE =
   (typeof import.meta !== "undefined" && import.meta.env?.VITE_JALNETRA_API_BASE) ||
-  "https://jalnetra-software-production.up.railway.app";
+  "/jalnetra-api";
 
 /**
  * Components persisted to PostgreSQL history (live → store → DB fallback).
@@ -127,6 +129,25 @@ export async function hydrateHistoryIntoSession(session) {
   if (filled.length) {
     console.info("[history] hydrated:", filled.join(", "));
   }
+
+  // Make sure BOD/COD + full suite have a jalnetra-live row for local today.
+  try {
+    const ensured = await ensureTodayHistory([...HISTORY_COMPONENTS]);
+    if (ensured?.ensured?.length) {
+      const promoted = ensured.ensured.filter((r) =>
+        /promoted|updated/.test(String(r.status || "")),
+      );
+      if (promoted.length) {
+        console.info(
+          `[history] today live rows ready (${ensured.day}):`,
+          promoted.map((r) => r.componentType).join(", "),
+        );
+      }
+    }
+  } catch (err) {
+    console.warn("[history] ensure-today skipped:", err.message);
+  }
+
   return { filled };
 }
 
@@ -135,6 +156,8 @@ async function persistLiveToHistory(componentId, body, session) {
   try {
     const refs = collectKmlRefs(body).slice(0, 40);
     await storeComponentHistory(componentId, body, {
+      // DB day key = local today so BOD/COD + all suite stay "live" for the full day.
+      liveDay: todayYmd(),
       endDate: session?.end_date || null,
       kmlType: HISTORY_KML_TYPES[componentId] || "default",
       kmlRefs: refs.length
@@ -612,23 +635,55 @@ async function runOneEndpoint(spec, session, onProgress) {
   }
 }
 
-/** True when Postgres already has a live snapshot for this calendar day. */
+/**
+ * True when Postgres already has a jalnetra-live row for local today.
+ * Ignores local-demo / old end-date rows so the suite can refresh into today.
+ */
+/** Calendar YYYY-MM-DD from API date string / Date (avoids UTC day-shift). */
+function asLocalYmd(value) {
+  if (value == null || value === "") return "";
+  if (typeof value === "string") {
+    const s = value.trim();
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+    try {
+      const d = new Date(s);
+      if (!Number.isNaN(d.getTime())) return todayYmd(d);
+    } catch {
+      /* ignore */
+    }
+  }
+  try {
+    const d = value instanceof Date ? value : new Date(value);
+    if (!Number.isNaN(d.getTime())) return todayYmd(d);
+  } catch {
+    /* ignore */
+  }
+  return "";
+}
+
 async function hasSameDayHistory(componentId) {
   if (!HISTORY_COMPONENTS.has(componentId)) return false;
   try {
     const cached = await getLatestComponentHistory(componentId);
     if (!cached?.payload) return false;
-    const today = todayYmd();
-    const todayUtc = new Date().toISOString().slice(0, 10);
-    const dataDate = String(cached.dataDate || "").slice(0, 10);
-    const fetched = String(cached.fetchedAt || "").slice(0, 10);
-    return dataDate === today || dataDate === todayUtc || fetched === today || fetched === todayUtc;
+    const source = String(cached.source || "");
+    if (!/jalnetra/i.test(source)) return false;
+    return asLocalYmd(cached.dataDate) === todayYmd();
   } catch {
     return false;
   }
 }
 
-function markSameDayCached(spec, session, onProgress) {
+async function markSameDayCached(spec, session, onProgress) {
+  // Ensure session has the today's live payload (not only a progress ping).
+  if (!session.results?.[spec.id]) {
+    try {
+      const cached = await getLatestComponentHistory(spec.id);
+      if (cached?.payload) session.results[spec.id] = cached.payload;
+    } catch {
+      /* keep going — UI may already be hydrated */
+    }
+  }
   onProgress?.({ id: spec.id, state: "ok", fromCache: true, sameDay: true });
   window.dispatchEvent(
     new CustomEvent("planeteye-endpoint", {
@@ -658,17 +713,17 @@ export function runJalNetra(onProgress) {
     for (const spec of ENDPOINTS) {
       // Already fetched+stored today → skip live JalNetra.
       if (await hasSameDayHistory(spec.id)) {
-        markSameDayCached(spec, session, onProgress);
+        await markSameDayCached(spec, session, onProgress);
         continue;
       }
       // Silt: skip while month coverage is still fresh.
       if (SILT_PRIORITY_IDS.includes(spec.id) && siltCacheIsFresh(spec.id)) {
-        markSameDayCached(spec, session, onProgress);
+        await markSameDayCached(spec, session, onProgress);
         continue;
       }
       // Non-history endpoints: keep existing session body (no day store).
       if (!HISTORY_COMPONENTS.has(spec.id) && session.results?.[spec.id]) {
-        markSameDayCached(spec, session, onProgress);
+        await markSameDayCached(spec, session, onProgress);
         continue;
       }
       todo.push(spec);

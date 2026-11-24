@@ -157,9 +157,11 @@ export function mountPollutionKeyPoints(root) {
 
   function syncIndexFromChainage() {
     const list = sides();
-    if (!list.length) return;
-    const near = state.selectedChainageMeters;
-    if (!Number.isFinite(near)) return;
+    if (!list.length) return false;
+    const fromState = Number(state.selectedChainageMeters);
+    const fromView = Number(window.__MM_SCENE__?.getViewChainageMeters?.());
+    const near = Number.isFinite(fromState) ? fromState : fromView;
+    if (!Number.isFinite(near)) return false;
 
     let bestI = 0;
     let bestD = Infinity;
@@ -182,14 +184,47 @@ export function mountPollutionKeyPoints(root) {
       sideIndex = bestI;
       siteIndex = bestSite;
     }
+    return matched;
   }
 
   function show() {
     visible = true;
-    sideIndex = 0;
-    siteIndex = 0;
+    document.dispatchEvent(new CustomEvent("river-measure-clear"));
+    tourDriving = true;
+    // Fly to the garbage pin nearest the user's current view — never site 1 / CH 0+000 by default.
+    const hit = window.__MM_SCENE__?.focusNearestPollutionSite?.({
+      meters: state.selectedChainageMeters,
+      focusCamera: true,
+    });
+    if (hit?.sideId != null) {
+      const list = sides();
+      const si = list.findIndex((s) => s.id === hit.sideId);
+      if (si >= 0) {
+        sideIndex = si;
+        const sites = list[si].sites || [];
+        const ji = sites.findIndex((s) => s.id === hit.id);
+        siteIndex = ji >= 0 ? ji : Number(hit.siteIndex) || 0;
+      } else if (Number.isFinite(hit.sideIndex)) {
+        sideIndex = hit.sideIndex;
+        siteIndex = Number(hit.siteIndex) || 0;
+      }
+      if (hit.meters != null && Number.isFinite(hit.meters)) {
+        state.selectedChainageMeters = hit.meters;
+        state.showChainage = true;
+        document.dispatchEvent(
+          new CustomEvent("chainage-select", {
+            detail: { meters: hit.meters, focus: false, fromPollutionTour: true },
+          }),
+        );
+      }
+    } else {
+      syncIndexFromChainage();
+      focusCurrent();
+    }
     render();
-    focusCurrent();
+    window.setTimeout(() => {
+      tourDriving = false;
+    }, 50);
   }
 
   function hide() {
@@ -208,10 +243,18 @@ export function mountPollutionKeyPoints(root) {
     render();
   }
 
+  function isGarbagePollutionLayer() {
+    const id = window.__MM_SCENE__?.getHydrologyActiveId?.();
+    return id === "pollution";
+  }
+
   function onFocusChange(e) {
-    if (e?.detail?.kind === "pollution" && e?.detail?.on) show();
+    // Only garbage-pin Pollution owns the key-point tour — not eutrophication/nitrogen rasters.
+    if (e?.detail?.kind === "pollution" && e?.detail?.on && isGarbagePollutionLayer()) show();
     else if (!e?.detail?.on || e?.detail?.kind !== "pollution") {
       if (visible && state.mapFocusKind !== "pollution") hide();
+    } else if (e?.detail?.kind === "pollution" && e?.detail?.on && !isGarbagePollutionLayer()) {
+      hide();
     }
   }
 

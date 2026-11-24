@@ -189,6 +189,20 @@ Defaults already point at `postgresql://mithi:mithi@127.0.0.1:5433/mithi_river`.
 
 Until then: **Vercel = frontend only**; history/cache needs local `db:up` + `dev:server`.
 
+### Vercel env (important)
+
+Do **not** paste the local `.env` into Vercel. Localhost `DATABASE_URL` / `HISTORY_API_PORT` do nothing on Vercel and `VITE_HISTORY_API_BASE=/api/history` breaks production (no history server there).
+
+On Vercel set only (optional):
+
+| Variable | Value |
+|---|---|
+| `VITE_JALNETRA_API_BASE` | `/jalnetra-api` |
+| `VITE_RIVEREYE_API` | `/rivereye-api` |
+| `VITE_HISTORY_API_BASE` | *(leave empty until hosted history API exists)* |
+
+Also enable **Git LFS** in the Vercel project so `satellite_imagery.jpg` deploys (not a 132-byte pointer).
+
 ## Production notes
 
 Recommended split (after a hosted URL exists):

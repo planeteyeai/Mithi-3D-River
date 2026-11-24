@@ -444,7 +444,8 @@ const BUILTIN_LAYER_DEFS = {
     legend: bankErosionLegendUrl,
     meta: "/data/hydrology/bank_erosion/meta.json",
     source: "bank-erosion1_21-10-2026|18-11-2026",
-    opacity: 0.78,
+    // Keep low so live water reads through green "no erosion" class.
+    opacity: 0.55,
     gridSegments: 144,
     liftM: 1.6,
     flipU: false,
@@ -1009,7 +1010,7 @@ export function createHydrologyLayer(dataset) {
             overlayUrl: def.overlay,
             opacity:
               id === "bank_erosion"
-                ? Math.min(0.85, Math.max(0.62, opacity))
+                ? Math.min(0.62, Math.max(0.42, opacity))
                 : Math.min(1, Math.max(0.92, opacity)),
             lift: Math.max(
               lift,
@@ -2801,7 +2802,7 @@ function buildBankErosionRibbon(stations, texture, bounds) {
   geo.setAttribute("uv", new THREE.BufferAttribute(uvs, 2));
   geo.setIndex(indices);
 
-  const mat = createBankErosionMaterial(texture, { opacity: 0.78 });
+  const mat = createBankErosionMaterial(texture, { opacity: 0.55 });
   mat.depthTest = false;
   mat.depthWrite = false;
 
@@ -3415,7 +3416,7 @@ async function buildFlatGroundOverlayMesh({
   });
   const mat = isBankErosion
     ? createBankErosionMaterial(texture, {
-        opacity: Math.min(0.85, Math.max(0.62, Number(opacity) || 0.78)),
+        opacity: Math.min(0.62, Math.max(0.42, Number(opacity) || 0.55)),
       })
     : new THREE.MeshBasicMaterial({
         map: texture,

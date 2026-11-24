@@ -2,14 +2,30 @@
  * Project history API (PostgreSQL-backed).
  * Live JalNetra → POST store → on fail GET latest from DB.
  * Same calendar day + same kml_type are not duplicated server-side.
+ *
+ * Local: VITE_HISTORY_API_BASE=/api/history (Vite proxies to :5181).
+ * Vercel: leave unset until a hosted history API exists — SPA must not hit /api/history.
  */
 
+const HISTORY_BASE_RAW =
+  typeof import.meta !== "undefined" ? import.meta.env?.VITE_HISTORY_API_BASE : undefined;
 const HISTORY_BASE =
-  (typeof import.meta !== "undefined" &&
-    import.meta.env?.VITE_HISTORY_API_BASE) ||
-  "/api/history";
+  HISTORY_BASE_RAW != null && String(HISTORY_BASE_RAW).trim() !== ""
+    ? String(HISTORY_BASE_RAW).trim()
+    : typeof import.meta !== "undefined" && import.meta.env?.DEV
+      ? "/api/history"
+      : "";
+
+export function isHistoryApiConfigured() {
+  return Boolean(HISTORY_BASE);
+}
 
 async function historyFetch(path, options = {}) {
+  if (!HISTORY_BASE) {
+    const err = new Error("history_api_disabled");
+    err.status = 503;
+    throw err;
+  }
   const url = `${HISTORY_BASE.replace(/\/$/, "")}${path}`;
   const res = await fetch(url, {
     ...options,
@@ -20,11 +36,21 @@ async function historyFetch(path, options = {}) {
     },
   });
   const text = await res.text();
+  // Vercel SPA catch-all used to return index.html for /api/history — reject that.
+  const looksHtml = /^\s*</.test(text) || /text\/html/i.test(res.headers.get("content-type") || "");
   let json = null;
-  try {
-    json = text ? JSON.parse(text) : null;
-  } catch {
-    json = null;
+  if (!looksHtml) {
+    try {
+      json = text ? JSON.parse(text) : null;
+    } catch {
+      json = null;
+    }
+  }
+  if (looksHtml || (!res.ok && !json)) {
+    const err = new Error(looksHtml ? "history_api_unavailable" : `history ${res.status}`);
+    err.status = looksHtml ? 503 : res.status;
+    err.body = json;
+    throw err;
   }
   if (!res.ok) {
     const err = new Error(json?.error || `history ${res.status}`);
@@ -35,18 +61,32 @@ async function historyFetch(path, options = {}) {
   return json;
 }
 
-/** Persist a live snapshot (deduped by day + kml_type on server). */
+/** Persist a live snapshot (upserted by calendar day + kml_type on server). */
 export async function storeComponentHistory(component, payload, meta = {}) {
   return historyFetch(`/${encodeURIComponent(component)}`, {
     method: "POST",
     body: JSON.stringify({
       payload,
+      liveDay: meta.liveDay ?? meta.live_day ?? null,
       endDate: meta.endDate ?? meta.end_date ?? null,
       kmlType: meta.kmlType ?? meta.kml_type ?? null,
       kmlRefs: meta.kmlRefs ?? null,
-      source: meta.source ?? "jalnetra",
+      source: meta.source ?? "jalnetra-live",
     }),
   });
+}
+
+/** Promote latest live payloads into today's DB rows (full-day coverage). */
+export async function ensureTodayHistory(components) {
+  return historyFetch(`/status/ensure-today`, {
+    method: "POST",
+    body: JSON.stringify({ components: components || undefined }),
+  });
+}
+
+/** List which components already have a live row for today. */
+export async function getTodayHistoryStatus() {
+  return historyFetch(`/status/today`);
 }
 
 /** Latest stored row for component (API-fail fallback). */

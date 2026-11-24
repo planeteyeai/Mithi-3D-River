@@ -128,10 +128,24 @@ export function createTooltip(root) {
         } else if (info.hydrologyPollution) {
           what = "POLLUTION";
           val = info.displayName || info.name || "—";
-        } else if (info.hydrologySalinity || info.hydrologyWaterQuality) {
-          what = info.hydrologySalinity ? "SALINITY" : info.layerTitle || "WATER QUALITY";
-          const isNumericWq = info.hydrologySalinity || info.layer === "water_quality_tss" || info.layer === "water_quality_ndci";
-          val = info.valueText ? info.valueText : (isNumericWq && info.range ? info.range : info.class_label || info.class || "—");
+        } else if (info.hydrologySalinity || info.hydrologyWaterQuality || info.pollutionClassHover) {
+          what = info.hydrologySalinity
+            ? "SALINITY"
+            : info.layerTitle || (info.pollutionClassHover ? "CLASS" : "WATER QUALITY");
+          const isNumericWq =
+            info.hydrologySalinity ||
+            info.layer === "water_quality_tss" ||
+            info.layer === "water_quality_ndci";
+          const className = info.class_label || info.class || info.label || "—";
+          if (info.valueText) {
+            val = `${className} · ${info.valueText}`;
+          } else if (info.range) {
+            val = `${className} · ${info.range}`;
+          } else if (isNumericWq && info.range) {
+            val = info.range;
+          } else {
+            val = className;
+          }
         } else if (info.depthZoneHover) {
           what = "DEPTH ZONE";
           val = info.depthClass ? info.depthClass + " m" : "—";
@@ -159,8 +173,11 @@ export function createTooltip(root) {
         el.style.borderRadius = "5px";
         el.style.minWidth = "auto";
         const wideWq = !!(
-          (info.compact || info.joiningHover) &&
-          (Number.isFinite(info.bodMgL) || Number.isFinite(info.codMgL))
+          ((info.compact || info.joiningHover) &&
+            (Number.isFinite(info.bodMgL) || Number.isFinite(info.codMgL))) ||
+          info.pollutionClassHover ||
+          info.hydrologyWaterQuality ||
+          info.hydrologySalinity
         );
         el.style.maxWidth = wideWq ? "300px" : matchAreaNameSize ? "200px" : "150px";
         el.style.background = "rgba(12, 18, 28, 0.9)";
@@ -440,7 +457,7 @@ export function createTooltip(root) {
         `;
         return;
       }
-      if (info.hydrologySalinity || info.hydrologyWaterQuality) {
+      if (info.hydrologySalinity || info.hydrologyWaterQuality || info.pollutionClassHover) {
         const title = info.hydrologySalinity
           ? "SALINITY"
           : info.layerTitle ||
@@ -449,6 +466,9 @@ export function createTooltip(root) {
               water_quality_ndwi: "NDWI — Water Detection",
               water_quality_ndci: "Chlorophyll-a",
               water_quality_wst: "WST — Temperature",
+              pollution_eutrophication: "EUTROPHICATION",
+              pollution_nitrogen: "NITROGEN",
+              pollution_coliform: "COLIFORM",
             }[info.layer] || "WATER QUALITY");
         const swatch = info.color
           ? `<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${info.color};border:1px solid rgba(255,255,255,.35);margin-right:6px;vertical-align:middle"></span>`
@@ -458,15 +478,16 @@ export function createTooltip(root) {
           info.hydrologySalinity ||
           info.layer === "water_quality_tss" ||
           info.layer === "water_quality_ndci";
-        const classDisplay = isNumericWq && info.range
-          ? info.range
-          : info.class_label || info.class || "—";
+        const classDisplay = info.class_label || info.class || info.label || "—";
+        const rangeDisplay =
+          info.valueText ||
+          info.range ||
+          (isNumericWq && info.range ? info.range : null);
         el.innerHTML = `
           <h3>${title}</h3>
-          <div class="kv"><span class="k">${isNumericWq ? "Scale" : "Class"}</span><span class="v">${swatch}${classDisplay}</span></div>
-          ${!isNumericWq && info.range ? `<div class="kv"><span class="k">Range</span><span class="v">${info.range}</span></div>` : ""}
-          ${info.valueText ? `<div class="kv"><span class="k">Value</span><span class="v depth">${info.valueText}</span></div>` : ""}
-          ${unit && !info.range ? `<div class="kv"><span class="k">Unit</span><span class="v">${unit}</span></div>` : ""}
+          <div class="kv"><span class="k">Class</span><span class="v">${swatch}${classDisplay}</span></div>
+          ${rangeDisplay ? `<div class="kv"><span class="k">${info.valueText ? "Value" : "Range"}</span><span class="v depth">${rangeDisplay}</span></div>` : ""}
+          ${unit && !rangeDisplay ? `<div class="kv"><span class="k">Unit</span><span class="v">${unit}</span></div>` : ""}
           ${info.lat != null ? `<div class="kv"><span class="k">Latitude</span><span class="v">${Number(info.lat).toFixed(6)}° N</span></div>` : ""}
           ${info.lon != null ? `<div class="kv"><span class="k">Longitude</span><span class="v">${Number(info.lon).toFixed(6)}° E</span></div>` : ""}
           <em style="display:block;margin-top:6px;font-size:9px;color:var(--muted);">${
@@ -476,7 +497,13 @@ export function createTooltip(root) {
                 ? "TSS scale · mg/L"
                 : info.layer === "water_quality_ndci"
                   ? "Chlorophyll-a scale · µg/L"
-                  : "Classified overlay · hover class"
+                  : info.layer === "pollution_eutrophication"
+                    ? "Trophic class · µg/L"
+                    : info.layer === "pollution_nitrogen"
+                      ? "Nitrogen risk class"
+                      : info.layer === "pollution_coliform"
+                        ? "Coliform class · CFU/100 ml"
+                        : "Classified overlay · hover class"
           }</em>
         `;
         return;
@@ -756,7 +783,7 @@ export function mountUI(root, {
   setTimeout(syncLeftStackTop, 50);
   setTimeout(syncLeftStackTop, 350);
 
-  mountAnalyticsControls(root, dataset);
+  const analytics = mountAnalyticsControls(root, dataset);
   const weather = mountWeatherWidget(root);
   const riverData = mountRiverDataPanel(leftStack, dataset, root);
   if (riverData?.el && leftStack.firstElementChild !== riverData.el) {
@@ -1262,10 +1289,21 @@ export function mountUI(root, {
       ]) || "Flood extent loaded.";
   }
 
+  function setViewModeChrome(mode) {
+    const map2d = mode === "2d";
+    root.classList.toggle("is-map-2d", map2d);
+    root.classList.toggle("is-map-3d", !map2d);
+    document.dispatchEvent(
+      new CustomEvent("view-mode-change", { detail: { mode: map2d ? "2d" : "3d" } }),
+    );
+    analytics?.syncViewMode?.();
+  }
+
   let chainPanel = null;
   const nav = mountNavigationControls(root, {
     onOverview: () => {
       map2dData?.leave();
+      setViewModeChrome("3d");
       onCamera("overview");
       nav.syncActive();
       // Keep overview clean — close chainage side panel (notes stay collapsed next open)
@@ -1273,18 +1311,24 @@ export function mountUI(root, {
     },
     onAirport: () => {
       map2dData?.leave();
+      setViewModeChrome("3d");
       // Keep constructed 3D twin (no orthophoto force-on). Aerodrome geometry stays on.
       window.__MM_SCENE__?.setAerodromeVisible?.(true);
       window.__MM_SCENE__?.focusAirport?.("overview");
       nav.syncActive();
     },
     onRiverSide: () => {
+      // 2D map — clear 3D analytics layers; River Data 2D analyses only.
+      analytics?.closeAll?.();
       map2dData?.resume();
+      setViewModeChrome("2d");
       onCamera("aerial");
       nav.syncActive();
     },
     on3D: (opts = {}) => {
+      // 3D twin — clear 2D analysis layers; Geology / WQ / Pollution only.
       map2dData?.leave();
+      setViewModeChrome("3d");
       let mid = 8000;
       const ch = dataset?.chainage;
       if (ch && ch.length) {
@@ -1313,6 +1357,12 @@ export function mountUI(root, {
   nav.setDrainagePressed?.(state.showDrainage);
   nav.setSettingsPressed?.(state.showSettings);
   nav.setFloodPressed?.(state.showFloodBar);
+  // Default load is 3D overview — analytics on, 2D analysis rows off.
+  setViewModeChrome(
+    state.cameraMode === "aerial" || state.cameraMode === "top" || state.cameraMode === "2d"
+      ? "2d"
+      : "3d",
+  );
 
   const chainRuler = mountChainageRuler(root, dataset);
   const map2dData = mountMap2dDataPanel(leftStack, riverData);

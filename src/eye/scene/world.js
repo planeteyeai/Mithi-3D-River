@@ -2100,6 +2100,45 @@ export async function createWorld(canvas, dataset, tooltip, { onCoreReady } = {}
     focusPollutionSide(sideId, opts = {}) {
       return hydrologyLayer.userData?.getPollutionLayer?.()?.userData?.focusSide?.(sideId, opts);
     },
+    /** Nearest garbage pin to the current camera / chainage — not first site. */
+    focusNearestPollutionSite(opts = {}) {
+      const layer = hydrologyLayer.userData?.getPollutionLayer?.();
+      if (!layer?.userData?.focusNearestToLocal) return null;
+      let x = Number(opts.x);
+      let z = Number(opts.z);
+      if (!Number.isFinite(x) || !Number.isFinite(z)) {
+        const m =
+          Number.isFinite(Number(opts.meters))
+            ? Number(opts.meters)
+            : Number.isFinite(Number(state.selectedChainageMeters))
+              ? Number(state.selectedChainageMeters)
+              : nearestChainageToCamera();
+        const p = interpolateChainage(dataset.chainage || [], m);
+        if (p && Number.isFinite(p.x) && Number.isFinite(p.z)) {
+          x = p.x;
+          z = p.z;
+        } else {
+          const c = cam.camera?.position;
+          x = c?.x;
+          z = c?.z;
+        }
+      }
+      if (!Number.isFinite(x) || !Number.isFinite(z)) return null;
+      return layer.userData.focusNearestToLocal({
+        x,
+        z,
+        focusCamera: opts.focusCamera !== false,
+      });
+    },
+    getViewChainageMeters() {
+      return (
+        (Number.isFinite(Number(state.selectedChainageMeters))
+          ? Number(state.selectedChainageMeters)
+          : null) ??
+        (Number.isFinite(Number(chainFocusM)) ? Number(chainFocusM) : null) ??
+        nearestChainageToCamera()
+      );
+    },
     clearPollutionSideFilter() {
       return hydrologyLayer.userData?.getPollutionLayer?.()?.userData?.clearSideFilter?.();
     },

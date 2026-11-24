@@ -94,9 +94,9 @@ export function mountBodCodHud(root, hooks = {}) {
   function autoAdvanceReach() {
     const list = reaches();
     if (!list.length) return;
-    // Wrap end → start so a parked session keeps producing fresh frames
+    // Advance data/card only — do not yank the camera to first/next reach.
     reachIndex = (reachIndex + 1) % list.length;
-    focusReach({ moveCamera: true, preferMeters: null });
+    focusReach({ moveCamera: false, preferMeters: null });
   }
 
   function reaches() {
@@ -470,8 +470,9 @@ export function mountBodCodHud(root, hooks = {}) {
       const here = Number(state.selectedChainageMeters);
       reachIndex = pickIndexForMeters(Number.isFinite(here) ? here : 0);
       applyTime(timeIndex, { rebuildRibbon: true });
+      // Stay put — show BOD/COD for the current chainage without flying to first reach.
       focusReach({
-        moveCamera: true,
+        moveCamera: false,
         preferMeters: Number.isFinite(here) ? here : null,
       });
     } catch (err) {

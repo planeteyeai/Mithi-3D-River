@@ -26,7 +26,7 @@ function classFromBod(p50, edges = [2, 3, 6, 10]) {
 
 export const MAIN_BOD_COD_URL =
   ((typeof import.meta !== "undefined" && import.meta.env?.VITE_JALNETRA_API_BASE) ||
-    "https://jalnetra-software-production.up.railway.app") + "/api/main-bod-cod";
+    "/jalnetra-api") + "/api/main-bod-cod";
 
 /** Main-stream LineString KML for Mithi (preferred upload). */
 export const MITHI_MAIN_STREAM_KML_URL = "/data/mithi/mithi_river_main_stream.kml";

@@ -1,11 +1,15 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "git lfs install --local && git lfs pull && npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
     {
       "source": "/jalnetra-api/api/:path*",
       "destination": "https://jalnetra-software-production.up.railway.app/api/:path*"
+    },
+    {
+      "source": "/jalnetra-api/:path*",
+      "destination": "https://jalnetra-software-production.up.railway.app/:path*"
     },
     {
       "source": "/rivereye-api/:path*",
@@ -24,7 +28,7 @@
       "destination": "https://overpass.openstreetmap.fr/api/interpreter"
     },
     {
-      "source": "/((?!assets/).*)",
+      "source": "/((?!assets/|data/|jalnetra-api/|rivereye-api/|osm-overpass|api/|favicon).*)",
       "destination": "/index.html"
     }
   ],

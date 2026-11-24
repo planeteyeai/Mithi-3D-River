@@ -938,7 +938,10 @@ export function attachInspect(canvas, camera, riverMeshes, terrainMesh, dataset,
         hydroId === "water_quality_ndwi" ||
         hydroId === "water_quality_ndci" ||
         hydroId === "water_quality_wst" ||
-        hydroId === "pollution"
+        hydroId === "pollution" ||
+        hydroId === "pollution_eutrophication" ||
+        hydroId === "pollution_nitrogen" ||
+        hydroId === "pollution_coliform"
           ? pickWorldXZ()
           : { wx: null, wz: null };
       if (wx != null) {
@@ -951,6 +954,9 @@ export function attachInspect(canvas, camera, riverMeshes, terrainMesh, dataset,
             water_quality_wst: "WST — Temperature",
             salinity: "SALINITY",
             pollution: "POLLUTION",
+            pollution_eutrophication: "EUTROPHICATION",
+            pollution_nitrogen: "NITROGEN",
+            pollution_coliform: "COLIFORM",
           };
 
           if (hydroId === "pollution" && fromClick) {
@@ -984,6 +990,10 @@ export function attachInspect(canvas, camera, riverMeshes, terrainMesh, dataset,
             }
           }
 
+          const isPollutionClass =
+            hydroId === "pollution_eutrophication" ||
+            hydroId === "pollution_nitrogen" ||
+            hydroId === "pollution_coliform";
           tooltip.show(e.clientX, e.clientY, {
             hydrologySalinity: hydroId === "salinity",
             hydrologyWaterQuality:
@@ -993,6 +1003,7 @@ export function attachInspect(canvas, camera, riverMeshes, terrainMesh, dataset,
             displayName: feat.name || null,
             displayType: feat.category || null,
             name: feat.name || feat.class_label || hydroId,
+            label: feat.class_label || feat.class || null,
             class_label: feat.class_label,
             class: feat.class,
             range: feat.range,
@@ -1011,6 +1022,7 @@ export function attachInspect(canvas, camera, riverMeshes, terrainMesh, dataset,
             lat: feat.lat ?? feat.vertices?.[0]?.lat,
             layer: hydroId,
             layerTitle: layerTitles[hydroId] || hydroId,
+            pollutionClassHover: isPollutionClass,
           });
           state.hover = { x: feat.x, z: feat.z, salinity: feat.class_label, layer: hydroId };
           return;

@@ -242,6 +242,70 @@ export function createGarbageSystem({ stations = [] } = {}) {
       record: rec,
       meters: rec?.riverChainageMeters ?? focus?.meters ?? side.meters ?? null,
       id: rec?.id ?? focus?.id ?? null,
+      sideId: side.id,
+    };
+  }
+
+  /**
+   * Nearest garbage site to a local XZ (camera / chainage). Prefer true distance —
+   * many western sites share CH 0+000 so meters-only ranking always picks site 1.
+   */
+  function nearestSiteToLocal(x, z) {
+    if (!records.length || !Number.isFinite(x) || !Number.isFinite(z)) return null;
+    let best = null;
+    let bestD = Infinity;
+    for (const r of records) {
+      const rx = Number(r.homeX ?? r.x);
+      const rz = Number(r.homeZ ?? r.z);
+      if (!Number.isFinite(rx) || !Number.isFinite(rz)) continue;
+      const d = (rx - x) ** 2 + (rz - z) ** 2;
+      if (d < bestD) {
+        bestD = d;
+        best = r;
+      }
+    }
+    return best;
+  }
+
+  /**
+   * Focus the garbage pin nearest to the user's current view (not first chainage).
+   * @param {{ x?: number, z?: number, focusCamera?: boolean }} [opts]
+   */
+  function focusNearestToLocal(opts = {}) {
+    const x = Number(opts.x);
+    const z = Number(opts.z);
+    const rec = nearestSiteToLocal(x, z);
+    if (!rec) return null;
+
+    const list = getSides();
+    let sideIndex = 0;
+    let siteIndex = 0;
+    let side = list[0] || null;
+    for (let i = 0; i < list.length; i++) {
+      const sites = list[i].sites || [];
+      const j = sites.findIndex((s) => s.id === rec.id);
+      if (j >= 0) {
+        sideIndex = i;
+        siteIndex = j;
+        side = list[i];
+        break;
+      }
+    }
+
+    if (side?.id) renderer.setSideFilter?.(side.id);
+    setLabelsEnabled(true);
+    const focusCamera = opts.focusCamera !== false;
+    const selected = select(rec.id, { focusCamera });
+
+    return {
+      side,
+      sideId: side?.id ?? rec.sideId ?? null,
+      sideIndex,
+      siteIndex,
+      siteCount: side?.sites?.length || 0,
+      record: selected || rec,
+      meters: selected?.riverChainageMeters ?? rec.riverChainageMeters ?? null,
+      id: rec.id,
     };
   }
 
@@ -481,6 +545,8 @@ export function createGarbageSystem({ stations = [] } = {}) {
     getKeyPoints,
     getSides,
     focusSide,
+    nearestSiteToLocal,
+    focusNearestToLocal,
     clearSideFilter,
     update,
     pickAt,
