@@ -3,18 +3,21 @@
  * Live JalNetra → POST store → on fail GET latest from DB.
  * Same calendar day + same kml_type are not duplicated server-side.
  *
- * Local: VITE_HISTORY_API_BASE=/api/history (Vite proxies to :5181).
- * Vercel: leave unset until a hosted history API exists — SPA must not hit /api/history.
+ * Same-origin `/api/history` on local Vite proxy and on Render full-stack.
+ * Set VITE_HISTORY_API_BASE=off to disable.
  */
 
 const HISTORY_BASE_RAW =
   typeof import.meta !== "undefined" ? import.meta.env?.VITE_HISTORY_API_BASE : undefined;
-const HISTORY_BASE =
-  HISTORY_BASE_RAW != null && String(HISTORY_BASE_RAW).trim() !== ""
-    ? String(HISTORY_BASE_RAW).trim()
-    : typeof import.meta !== "undefined" && import.meta.env?.DEV
-      ? "/api/history"
-      : "";
+const HISTORY_BASE = (() => {
+  const raw = HISTORY_BASE_RAW != null ? String(HISTORY_BASE_RAW).trim() : "";
+  if (!raw || raw === "off" || raw === "0" || raw === "false") {
+    // Default on: Render + local both expose /api/history on the same host.
+    if (!raw) return "/api/history";
+    return "";
+  }
+  return raw;
+})();
 
 export function isHistoryApiConfigured() {
   return Boolean(HISTORY_BASE);

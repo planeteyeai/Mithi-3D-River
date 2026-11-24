@@ -162,56 +162,48 @@ Schema: `server/schema.sql` → table `component_history` (auto-applied on boot)
 
 ---
 
-## Backend mode (local first)
-
-**Right now we use the local backend only** (no hosted history API URL yet).
+## Backend mode (local)
 
 ```bash
 npm run db:up          # Postgres :5433
-npm run dev:server     # Express  :5181
+npm run dev:server     # Express  :5181  (API + proxies; serves dist/ if built)
 npm run history:health # {"ok":true,"db":true}
 npm run dev            # SPA      :5180  (proxies /api/history → :5181)
 ```
 
-Env: copy `.env.example` → `.env` and `server/.env.example` → `server/.env`.  
-Defaults already point at `postgresql://mithi:mithi@127.0.0.1:5433/mithi_river`.
+Env: copy `.env.example` → `.env`.  
+Defaults: `postgresql://mithi:mithi@127.0.0.1:5433/mithi_river`.
 
-### When you get a hosted API later
+## Production — all on Render
 
-1. Set `DATABASE_URL` on the host (Render/Neon) and deploy `server/` (`render.yaml`).
-2. Set `HISTORY_API_PUBLIC_URL=https://YOUR-SERVICE…` in the deploy env.
-3. Add these rewrites to `vercel.json` (above the SPA catch-all) and redeploy:
+One Blueprint (`render.yaml`) deploys:
 
-```json
-{ "source": "/api/health", "destination": "https://YOUR-SERVICE/api/health" },
-{ "source": "/api/history/:path*", "destination": "https://YOUR-SERVICE/api/history/:path*" }
-```
+1. **Web service** `mithi-river-3d` — Vite SPA + history API + JalNetra/RiverEye/OSM proxies  
+2. **Postgres** `mithi-river-db`
 
-Until then: **Vercel = frontend only**; history/cache needs local `db:up` + `dev:server`.
+### Deploy
 
-### Vercel env (important)
+1. [Render Dashboard](https://dashboard.render.com) → **New** → **Blueprint**
+2. Select `planeteyeai/Mithi-3D-River` (branch `main`)
+3. Apply blueprint → wait for build (`git lfs pull` + `npm run build` + server install)
+4. Open `https://mithi-river-3d.onrender.com` (or your service URL)
 
-Do **not** paste the local `.env` into Vercel. Localhost `DATABASE_URL` / `HISTORY_API_PORT` do nothing on Vercel and `VITE_HISTORY_API_BASE=/api/history` breaks production (no history server there).
+### Render env (set by blueprint)
 
-On Vercel set only (optional):
-
-| Variable | Value |
+| Name | Value |
 |---|---|
+| `DATABASE_URL` | *(from Render Postgres)* |
+| `VITE_HISTORY_API_BASE` | `/api/history` |
 | `VITE_JALNETRA_API_BASE` | `/jalnetra-api` |
 | `VITE_RIVEREYE_API` | `/rivereye-api` |
-| `VITE_HISTORY_API_BASE` | *(leave empty until hosted history API exists)* |
+| `JALNETRA_UPSTREAM` | `https://jalnetra-software-production.up.railway.app` |
+| `RIVEREYE_UPSTREAM` | `https://rivereye-production.up.railway.app` |
+| `SERVE_SPA` | `1` |
+| `HOST` | `0.0.0.0` |
 
-Also enable **Git LFS** in the Vercel project so `satellite_imagery.jpg` deploys (not a 132-byte pointer).
+Do **not** put localhost / `127.0.0.1` values on Render.
 
-## Production notes
-
-Recommended split (after a hosted URL exists):
-
-1. **Frontend** → Vercel (Vite SPA + `vercel.json` proxies)
-2. **History API** → Render Web Service (`server/`)
-3. **Database** → Render Postgres / Neon (`DATABASE_URL`)
-
-See `render.yaml` for a Render blueprint.
+Free Render web services sleep after idle — first load can take ~30–60s.
 
 ---
 

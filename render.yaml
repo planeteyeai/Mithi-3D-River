@@ -1,6 +1,9 @@
-# Render Blueprint — history API + managed Postgres
-# Apply from Render Dashboard → New → Blueprint (do not auto-apply without approval).
-# Frontend is recommended on Vercel; optional static site can be added later.
+# Render Blueprint — full Mithi twin on Render
+# Dashboard → New → Blueprint → select this repo
+#
+# Creates:
+#   1) Postgres  mithi-river-db
+#   2) Web       mithi-river-3d  (Vite SPA + history API + JalNetra/RiverEye proxies)
 
 databases:
   - name: mithi-river-db
@@ -10,16 +13,21 @@ databases:
 
 services:
   - type: web
-    name: mithi-history-api
+    name: mithi-river-3d
     runtime: node
     plan: free
-    rootDir: server
-    buildCommand: npm install
-    startCommand: npm start
+    # Repo root — build frontend then install server deps
+    rootDir: .
+    buildCommand: git lfs install --local && git lfs pull && npm install && npm run build && npm --prefix server install
+    startCommand: npm --prefix server start
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
+      - key: HOST
+        value: "0.0.0.0"
+      - key: SERVE_SPA
+        value: "1"
       - key: MITHI_PROJECT_ID
         value: mithi
       - key: DATABASE_URL
@@ -30,3 +38,17 @@ services:
         value: "10"
       - key: HISTORY_REQUEST_TIMEOUT_MS
         value: "25000"
+      - key: PROXY_REQUEST_TIMEOUT_MS
+        value: "600000"
+      # Inlined into the Vite bundle at build time (same-origin paths)
+      - key: VITE_HISTORY_API_BASE
+        value: /api/history
+      - key: VITE_JALNETRA_API_BASE
+        value: /jalnetra-api
+      - key: VITE_RIVEREYE_API
+        value: /rivereye-api
+      # Upstream originals (proxied by Express — override if Railway URLs change)
+      - key: JALNETRA_UPSTREAM
+        value: https://jalnetra-software-production.up.railway.app
+      - key: RIVEREYE_UPSTREAM
+        value: https://rivereye-production.up.railway.app
