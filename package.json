@@ -14,6 +14,7 @@
     "db:tables": "docker exec mithi_postgres psql -U mithi -d mithi_river -c \"\\dt+\" -c \"SELECT id, component_type, data_date, kml_type, source, fetched_at, pg_column_size(payload) AS payload_bytes FROM component_history ORDER BY fetched_at DESC LIMIT 50;\"",
     "db:peek": "docker exec mithi_postgres psql -U mithi -d mithi_river -c \"SELECT id, component_type, data_date, kml_type, left(payload::text, 200) AS payload_preview FROM component_history ORDER BY id DESC LIMIT 10;\"",
     "db:seed-demos": "node server/seedLocalSnapshots.js",
+    "db:migrate": "node server/migrate.js",
     "stack:up": "docker compose up -d postgres history-api",
     "stack:down": "docker compose down",
     "stack:logs": "docker compose logs -f postgres history-api",
