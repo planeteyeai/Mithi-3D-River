@@ -34,6 +34,9 @@ services:
         fromDatabase:
           name: mithi-river-db
           property: connectionString
+      # Do NOT set HISTORY_API_PORT on Render — use platform PORT only
+      - key: PGSSLMODE
+        value: require
       - key: PG_POOL_MAX
         value: "10"
       - key: HISTORY_REQUEST_TIMEOUT_MS

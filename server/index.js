@@ -10,11 +10,14 @@
 import "./loadEnv.js";
 import express from "express";
 import cors from "cors";
-import { ensureSchema, healthCheck, pool } from "./db.js";
+import { ensureSchema, healthCheck, pool, dbConfigured } from "./db.js";
 import { historyRouter } from "./routes/history.js";
 import { mountProxies, mountSpa } from "./spaAndProxies.js";
 
-const PORT = Number(process.env.HISTORY_API_PORT || process.env.PORT || 5181);
+// Render injects PORT — always prefer it over local HISTORY_API_PORT.
+const PORT = Number(
+  process.env.PORT || process.env.HISTORY_API_PORT || 5181,
+);
 const HOST = process.env.HOST || "0.0.0.0";
 
 const app = express();
@@ -43,23 +46,43 @@ app.get("/api/health", async (_req, res) => {
   // even if Postgres is still linking / waking.
   let db = false;
   let dbError = null;
-  try {
-    db = !!(await healthCheck());
-  } catch (err) {
-    dbError = err.message;
+  if (!dbConfigured || !pool) {
+    dbError = "DATABASE_URL_missing_or_localhost";
+  } else {
+    try {
+      db = !!(await healthCheck());
+    } catch (err) {
+      dbError = err.message;
+    }
   }
   res.json({
     ok: true,
     service: "mithi-river",
     db,
+    dbConfigured,
     dbError,
-    pool: {
-      total: pool.totalCount,
-      idle: pool.idleCount,
-      waiting: pool.waitingCount,
-    },
+    pool: pool
+      ? {
+          total: pool.totalCount,
+          idle: pool.idleCount,
+          waiting: pool.waitingCount,
+        }
+      : null,
     spa: process.env.SERVE_SPA !== "0",
+    port: PORT,
   });
+});
+
+// Short-circuit history when DB is not wired (avoids ECONNREFUSED spam on Render).
+app.use("/api/history", (req, res, next) => {
+  if (!dbConfigured || !pool) {
+    return res.status(503).json({
+      ok: false,
+      error: "database_not_configured",
+      hint: "Set DATABASE_URL to your Render Postgres connection string (not localhost:5433).",
+    });
+  }
+  next();
 });
 
 app.use("/api/history", historyRouter);
